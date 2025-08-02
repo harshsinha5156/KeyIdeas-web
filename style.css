@@ -1,0 +1,490 @@
+:root {
+            --primary-color: #6637C5;
+            --nav-height: 106px;
+        }
+        
+        body {
+            width: 1920px;
+            margin: 0 auto;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            
+            position: relative;
+        }
+        
+        .header-section {
+            background-color: #ebe2fb;
+            height: 280.33px;
+        }
+        
+        .nav-container {
+            height: var(--nav-height);
+            border-bottom: 1px solid #000;
+            padding: 0 100px !important;
+        }
+        
+        .logo {
+            font-weight: 500;
+            letter-spacing: 3px;
+            color: var(--primary-color);
+            font-size: 28px;
+            line-height: 1.2;
+        }
+        
+        .logo-line {
+            height: 1px;
+            width: 240px;
+            background-color: #000;
+            margin: 8px 0;
+        }
+        
+        .tagline {
+            
+            color: #000;
+            font-size: 20px;
+            letter-spacing: 0.5px;
+        }
+        
+        .nav-link-custom {
+            color: var(--primary-color) !important;
+            font-size: 18px;
+            font-weight: 500;
+            position: relative;
+            padding: 0 5px !important;
+            margin: 0 15px !important;
+        }
+        
+        .nav-link-custom::after {
+            content: " ▼";
+            font-size: 12px;
+            position: absolute;
+            right: -10px;
+            bottom: 3px;
+        }
+        
+        .btn-lets-talk {
+            background-color: var(--primary-color);
+            color: white !important;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 25px !important;
+            border-radius: 4px !important;
+            margin-left: 15px !important;
+        }
+        
+        /* Disable Bootstrap mobile menu */
+        .navbar-toggler {
+            display: none !important;
+        }
+        
+        /* Force show desktop menu always */
+        .navbar-collapse {
+            display: flex !important;
+            flex-basis: auto !important;
+        }
+    
+        /* ================================================== Driving Success Section */
+
+       .main-section {
+      width: 1920px;
+      height: 831px;
+      display: flex;
+      background-color: #6637C5;
+      color: white;
+      position: relative;
+    }
+
+    .content-container {
+      height: 340px;
+      width: 688px;
+      margin-top: 200px;
+      margin-left: 220px;
+    }
+
+    h1 {
+      font-family: 'Poppins';
+      font-weight: 700;
+      font-size: 66px;
+      line-height: 129%;
+      letter-spacing: 0%;
+      margin-bottom: 30px;
+    }
+
+    .subtitle {
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    .right-section {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .row {
+      display: flex;
+    }
+
+    .box {
+      background-color: #4F2B93;
+      color: white;
+      width: 270.15px;
+      height: 277px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      border: 1px solid #ffffff33;
+      border-radius: 10px;
+    }
+
+    .right-section .row:nth-child(2),
+    .right-section .row:nth-child(3) {
+      flex-direction: row-reverse;
+    }
+
+
+    /* ========================================================= Comprehensive IT consulting */
+
+       .consulting-container {
+      max-width: 1532px;
+      margin: auto;
+      padding-top: 70px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      align-items: center;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .section-heading {
+      width: 100%;
+      max-width: 1248px;
+      height: auto;
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      color: #000;
+    }
+
+    .consulting-section {
+      display: flex;
+      flex-direction: row;
+      gap: 50px;
+      width: 100%;
+      height: 100%;
+      align-items: stretch;
+    }
+
+    .tab-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 0 0 315px;
+    }
+
+    .tab-button {
+      background-color: #f2f2f2;
+      color: black;
+      font-weight: 600;
+      padding: 11px 20px 11px 10px;
+      border: none;
+      border-radius: 10px;
+      height: 60px;
+      text-align: left;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-size: 16px;
+    }
+
+    .tab-button.active {
+      background-color: #4f149A;
+      color: white;
+    }
+
+    .tab-content-wrapper {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tab-content-box {
+      width: 1167px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 30px;
+      color: black;
+      border: 1px solid #ccc;
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      height: 100%;
+      font-size: 18px;
+    }
+
+    .tab-content-box.active {
+      display: flex;
+    }
+
+    .tab-content-box h2 {
+      color: #4f149A;
+      font-weight: 700;
+      font-size: 30px;
+    }
+
+    .tab-grid {
+      display: grid;
+      gap: 10px;
+    }
+
+    #tab1 .tab-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    #tab2 .tab-grid,
+    #tab3 .tab-grid,
+    #tab4 .tab-grid,
+    #tab5 .tab-grid,
+    #tab6 .tab-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tab-grid a {
+      text-decoration: underline;
+      color: black;
+    }
+
+    @media (max-width: 768px) {
+      .consulting-section {
+        flex-direction: column-reverse;
+      }
+
+      .tab-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .tab-button {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .section-heading {
+        font-size: 24px;
+      }
+
+      .tab-content-box {
+        width: 100%;
+      }
+    }
+
+
+    /* ===================================== Experiences Crafted by our Software Experts. ==== */
+
+   .experience-section {
+      
+      max-width: 1528px;
+      margin: 0 auto;
+      padding-top: 70px;
+      padding-bottom: 70px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .experience-section h2 {
+      font-size: 48px;
+      font-weight: 700;
+      text-align: center;
+      color: #000;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: 890px 618px ;
+      grid-template-rows: 475px ;
+      gap: 50px;
+    }
+
+    .experience-card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      color: white;
+      display: flex;
+      
+      
+      background-position: center;
+      padding: 30px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .experience-card:hover {
+      transform: scale(1.03);
+    }
+
+    /* .experience-card h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    } */
+
+    /* .experience-card p {
+      font-size: 17px;
+      margin: 0;
+    } */
+
+    .card-1, .card-4 {
+      width: 890px;
+      height: 475px;
+    }
+
+    .card-2, .card-3 {
+      width: 618px;
+      height: 475px;
+    }
+
+    .card-1 {
+      background-image: url('./images/experinces1.webp');
+    }
+
+    .card-2 {
+      background-image: url('./images/experinces2.webp');
+    }
+
+    .card-3 {
+      background-image: url('./images/experinces3.webp');
+    }
+
+    .card-4 {
+      background-image: url('./images/experinces4.webp');
+    }
+
+     @media (max-width: 1400px) {
+      .experience-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+
+      .card-1, .card-2, .card-3, .card-4 {
+        width: 100% !important;
+        height: auto;
+      }
+    }
+
+
+    /* ===========================Success Stroies Powered by our IT ========== */
+
+   .success-section {
+      max-width: 1518px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .success-box {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      height: 579.22px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .success-box img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease-in-out;
+      border-radius: 15px;
+    }
+
+    .success-box:hover img {
+      transform: scale(1.05);
+    }
+
+    
+
+    
+
+    
+
+    @media (max-width: 768px) {
+      .success-box {
+        height: auto;
+      }
+
+      .overlay-text h5 {
+        font-size: 16px;
+      }
+
+      .overlay-text p {
+        font-size: 14px;
+      }
+    }
+
+
+
+    /* 
+  <!-- =======================  Trusted Software for Small and Medium-sized section ======= --> */
+
+   .animate-scroll {
+      animation: scroll-horizontal 25s linear infinite;
+    }
+
+    @keyframes scroll-horizontal {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 70px !important;
+      }
+    }
+
+    /* =================== Customized IT Consulting section ============= */
+
+    .custom-it-section {
+    max-width: 100%;
+  }
+  .card-box {
+    width: 343.31px;
+    height: 157.15px;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+     border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .purple-bg {
+    background: #e8e2ff;
+  }
+  .card-img {
+    width: 127.37px;
+    height: 127.37px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .card-text {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    /* width: 150.41px;
+    height: 56.59px; */
+  }
