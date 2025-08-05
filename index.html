@@ -1,168 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Responsive Header & Navbar</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <style>
-    :root {
-      --primary-color: #4f149a;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <!-- Bootstrap Icons CDN -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+     <!-- Google Fonts: Open Sans -->
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-    }
 
-    /* ✅ Desktop Layout */
-    @media (min-width: 769px) {
-      body {
-        width: 1920px;
-        margin: 0 auto;
-      }
-    }
 
-    /* ✅ Mobile Layout */
-    @media (max-width: 768px) {
-      body {
-        width: 389px;
-        margin: 0 auto;
-      }
-
-      .header-section {
-        height: auto;
-        padding: 30px 10px;
-      }
-
-      .header-text {
-        font-size: 22px;
-      }
-
-      .nav-container {
-        padding: 15px;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .navbar-collapse {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        width: 100%;
-      }
-
-      .logo {
-        font-size: 22px;
-        letter-spacing: 2px;
-      }
-
-      .logo-line {
-        width: 100%;
-      }
-
-      .tagline {
-        font-size: 14px;
-      }
-
-      .nav-link-custom {
-        font-size: 16px;
-        margin: 5px 0 !important;
-        padding: 0 !important;
-      }
-
-      .btn-lets-talk {
-        font-size: 16px;
-        padding: 8px 20px !important;
-        width: 100%;
-      }
-    }
-
-    /* ✅ Common Styles */
-    .header-section {
-      background-color: #ebe2fb;
-      height: 280.33px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .header-text {
-      font-size: 32px;
-      font-weight: 700;
-      text-align: center;
-    }
-
-    .nav-container {
-      border-bottom: 1px solid #000;
-      padding: 0 60px;
-      width: 100%;
-    }
-
-    .logo {
-      font-weight: 500;
-      color: var(--primary-color);
-      font-size: 28px;
-      line-height: 1.2;
-      letter-spacing: 3px;
-    }
-
-    .logo-line {
-      height: 1px;
-      width: 240px;
-      background-color: #000;
-      margin: 8px 0;
-    }
-
-    .tagline {
-      color: #000;
-      font-size: 20px;
-      letter-spacing: 0.5px;
-    }
-
-    .nav-link-custom {
-      color: var(--primary-color) !important;
-      font-size: 18px;
-      font-weight: 500;
-      position: relative;
-      text-decoration: none;
-      margin: 0 15px !important;
-      padding: 0 5px !important;
-    }
-
-    .nav-link-custom::after {
-      content: " ▼";
-      font-size: 12px;
-      position: absolute;
-      right: -10px;
-      bottom: 3px;
-    }
-
-    .btn-lets-talk {
-      background-color: var(--primary-color);
-      color: white !important;
-      font-size: 18px;
-      font-weight: 500;
-      padding: 10px 25px !important;
-      border-radius: 4px !important;
-      margin-left: 15px !important;
-    }
-
-    /* Hide Toggler - show full menu */
-    .navbar-toggler {
-      display: none !important;
-    }
-
-    .navbar-collapse {
-      display: flex !important;
-      flex-basis: auto !important;
-    }
-  </style>
+    <link rel="stylesheet" href="style.css">
+    <title>KEYIDEAS</title>
 </head>
 <body>
 
-  <!-- Header Section -->
+    
+  <!-- Header -->
   <div class="header-section d-flex align-items-center justify-content-center">
     <h1 class="header-text text-center m-0">HOMEPAGE - DESKTOP</h1>
   </div>
@@ -170,14 +27,14 @@
   <!-- Navbar -->
   <nav class="nav-container navbar navbar-expand-lg mb-0">
     <div class="container-fluid p-0 d-flex flex-wrap justify-content-between align-items-center">
-      <!-- Logo Section -->
+      <!-- Logo -->
       <div class="d-flex flex-column me-3">
         <span class="logo">K E Y I D E A S</span>
         <div class="logo-line"></div>
         <span class="tagline">agility-ingenuity-reliability</span>
       </div>
 
-      <!-- Nav Links Section -->
+      <!-- Nav Items -->
       <div class="navbar-collapse d-flex align-items-center gap-lg-5 gap-3 justify-content-end flex-wrap">
         <a href="#" class="nav-link nav-link-custom">Company</a>
         <a href="#" class="nav-link nav-link-custom">Work</a>
@@ -188,5 +45,686 @@
     </div>
   </nav>
 
+    <!-- Driving success section -->
+
+<section class="main-section">
+  <div class="content-container">
+    <h1>Best Design and Development Company</h1>
+    <p class="subtitle">Agility, Ingenuity, Reliability: Powering Progress.</p>
+  </div>
+
+  <div class="right-section grid-container" id="gridContainer">
+    <div class="row" id="row1">
+      <div class="box transform">Transform</div>
+      <div class="box clutch-b2b">
+        <div class="text-center">
+          <h3>Clutch</h3>
+          <p>★★★★★</p>
+          <h6>Top B2B</h6>
+          <p>Providers in the Indian <br> Emerging Tech Market <br>for 2021</p>
+        </div>
+      </div>
+      <div class="box convert">Convert</div>
+      <div class="box top-shopify text-center">
+        <img src="./images/goodfirm.webp" alt="GoodFirms Logo">
+        <h6>Top Shopify</h6>
+        <p>Development <br> Companies in 2019</p>
+      </div>
+    </div>
+
+    <div class="row" id="row2">
+      <div class="box attract">Attract</div>
+      <div class="box microsoft-cloud text-center">
+        <img src="./images/microsoft1.webp" alt="Microsoft Logo">
+        <p>Microsoft Cloud</p>
+      </div>
+      <div class="box growth">Growth</div>
+    </div>
+
+    <div class="row" id="row3">
+      <div class="box clutch-top12 text-center">
+        <h3>Clutch</h3>
+        <p>★★★★★</p>
+        <h6>Top 12</h6>
+        <p>out of 400 top Mobile <br> App Developers in <br>India, 2020</p>
+      </div>
+      <div class="box strategy">Strategy</div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- Comprehensive IT Consulting Section. ==================== -->
+
+  <section class="consulting-container">
+    <div class="section-heading">
+      Comprehensive IT Consulting Services for All Business Needs
+    </div>
+
+    <div class="consulting-section">
+      <div class="tab-buttons">
+        <button class="tab-button active" data-tab="tab1">Software Product Engineering</button>
+        <button class="tab-button" data-tab="tab2">Website & E-Commerce</button>
+        <button class="tab-button" data-tab="tab3">Digital Experience</button>
+        <button class="tab-button" data-tab="tab4">Remote Team</button>
+        <button class="tab-button" data-tab="tab5">Hi-Tech</button>
+        <button class="tab-button" data-tab="tab6">Online Marketing</button>
+      </div>
+
+      <div class="tab-content-wrapper">
+        <div class="tab-content-box active" id="tab1">
+          <h2>Software Product Engineering</h2>
+          <p>We excel in software product engineering...</p>
+          <div class="tab-grid">
+            <a href="#">API & Microservices</a>
+            <a href="#">Enterprise CMS Solutions</a>
+            <a href="#">Software Modernization</a>
+            <a href="#">Cloud Application Development</a>
+            <a href="#">Enterprise Software Development</a>
+            <a href="#">Software Outsourcing</a>
+            <a href="#">Custom CRM Software</a>
+            <a href="#">Microsoft Development</a>
+            <a href="#">Software Support</a>
+            <a href="#">Custom Software Development</a>
+            <a href="#">Mobile App Development</a>
+            <a href="#">Testing & QA</a>
+            <a href="#">DevOps Consulting</a>
+            <a href="#">Software Consulting</a>
+          </div>
+        </div>
+
+        <div class="tab-content-box" id="tab2">
+          <h2>Website & E-Commerce</h2>
+          <p>We specialize in creating tailored websites and e-commerce Solutions, offering user-friendly designs, seamless functionality, and secure platforms to help businesses thrive online.</p>
+           <div class="tab-grid">
+            <a href="#">AbleCommerce Website Development</a>
+            <a href="#">Shopify Website Development</a>
+            <a href="#">Bagisto E-Commerce</a>
+            <a href="#">Web Development</a>
+            <a href="#">E-Commerce Website Design</a>
+            <a href="#">Website Maintenance Services</a>
+            <a href="#">Front-end Development</a>
+            <a href="#">Website Redesign Services</a>
+            <a href="#">Responsive websites</a>
+            <a href="#">WordPress Website Development</a>
+            
+          </div>
+        </div>
+
+        <div class="tab-content-box" id="tab3">
+          <h2>Digital Experience</h2>
+          <p>We specialize in delivering exceptional digital experiences, focusing on user-centric design, seamless functionality, and innovative solutions to help businesses engage and thrive in the digital world.</p>
+           <div class="tab-grid">
+            <a href="#">Branding</a>
+            <a href="#">User Research</a>
+            <a href="#">MVP</a>
+            <a href="#">UX & Information Architecture</a>
+            <a href="#">UI/UX Design & Prototyping</a>
+            <a href="#">Web Design</a>
+           
+          </div>
+        </div>
+
+        <div class="tab-content-box" id="tab4">
+          <h2>Remote Team</h2>
+          <p>We specialize in managing remote teams, providing efficient collaboration , seamless communication, and high-quality project delivery to help businesses succeed regardless of location.</p>
+           <div class="tab-grid">
+            <a href="#">Hire .NET Core Developers</a>
+            <a href="#">Hire MAUI Developers</a>
+            <a href="#">Hire Mobile App Developers</a>
+            <a href="#">Hire Angular Developers</a>
+            <a href="#">Software Outsourcing</a>
+            <a href="#">Hire NodeJS Developers</a>
+            <a href="#">Hire Laravel Developers</a>
+            <a href="#">Hire ReactJS Developers</a>
+            
+          </div>
+        </div>
+
+        <div class="tab-content-box" id="tab5">
+          <h2>Hi-Tech</h2>
+          <p>We specialize in delivering high-tech services, focusing on innovation , seamless integration , and performance optimization to help businesses thrive in today's dynamic digital environment.</p>
+           <div class="tab-grid">
+            <a href="#">3D Virtual Try On</a>
+            <a href="#">ChatBot</a>
+            <a href="#">Big Data Solutions</a>
+            <a href="#">IOT</a>
+            <a href="#">Blockchain</a>
+            
+        </div>
+
+        <div class="tab-content-box" id="tab6">
+          <h2>Online Marketing</h2>
+          <p>We specialize in digital marketing, offering data-driven strategies, targeted campaigns, and optimized performance to help businesses grow their online presence and achieve measurable results.</p>
+           <div class="tab-grid">
+            <a href="#">Digital Marketing</a>
+            <a href="#">Klaviyo Email Marketing</a>
+            <a href="#">Search Engine Optimization (SEO)</a>
+            <a href="#">Social Media Optimization (SMO)</a>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--     /* ===================================== Experiences Crafted by our Software Experts. ==== */ -->
+
+  <section class="experience-section container">
+    <h2 class="text-center">Experiences Crafted by our Software Experts</h2>
+
+    <!-- Row 1 -->
+    <div class="experience-row">
+      <div class="experience-card card-1">
+        <h3>HEALTHCARE RESEARCH SOLUTION</h3>
+        <p>User-friendly health-based applications for clinical trial management, streamlining data access and collaboration.</p>
+      </div>
+      <div class="experience-card card-2">
+        <h3>ADVANCED JEWELRY SOLUTIONS</h3>
+        <p>Explore innovative solutions featuring custom designs, certified quality, and enhanced shopping experiences across the industry.</p>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="experience-row">
+      <div class="experience-card card-3">
+        <h3>TRAVEL & HOSPITALITY</h3>
+        <p>Platforms that simplify tour planning, make bookings easier, and enhance trip experiences.</p>
+      </div>
+      <div class="experience-card card-4">
+        <h3>ENTERPRISE SOFTWARE</h3>
+        <p>Powerful tools designed to integrate processes, boost productivity, and scale your business seamlessly.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- /* ===========================Success Stroies Powered by our IT ========== */ -->
+
+ <section class="success-section">
+    <h2 class="text-center fw-bold mb-5 heading-large">
+  Success Stories Powered by our IT Consulting Expertise
+</h2>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-6">
+        <div class="success-box">
+          <img src="./images/success1.webp" alt="" />
+          <div class="overlay-text">
+            <!-- <h5>Real Estate & Property Management</h5>
+            <p>Efficient solutions for property listings, tenant management, and smooth projects operations.</p> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-6">
+        <div class="success-box">
+          <img src="./images//success2.webp" alt="" />
+          <div class="overlay-text">
+            <!-- <h5>E-Commerce Platforms</h5>
+            <p>Platforms with diverse products, easy payments, and faster delivery.</p> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-6">
+        <div class="success-box">
+          <img src="./images/success3.webp" alt="Fintech" />
+          <!-- <div class="overlay-text">
+            <h5>Finance & Fintech Solutions</h5>
+            <p>Innovative tools designed to simplify financial management, enhance transactions, and drive growth in the digital economy.</p>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-6">
+        <div class="success-box">
+          <img src="./images//success4.webp" alt="Contractor Services" />
+          <!-- <div class="overlay-text">
+            <h5>Contractor & Home Services</h5>
+            <p>Reliable solutions for professional contracting, home maintenance, and remodeling needs.</p>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================  Trusted Software for Small and Medium-sized section ======= -->
+   <section style="background-color: #ebe2fb; width: 100%; height: 953.5px; position: relative; overflow: hidden;">
+  <div class="container pt-5 d-flex flex-column align-items-center text-center">
+    <h2 class="fw-bold mb-3" style="font-size: 2.6rem; text-align: center;">
+      Trusted Software Experts for Small and Medium-Sized Clients
+    </h2>
+    <p class="w-75 mx-auto mb-7 mt-5" style="text-align: center; line-height: 1.8; font-size: 1.25rem;">
+      In 2007, our journey in IT consulting services began as a software development agency.<br>
+      Since then, we’ve continually progressed, evolving into a comprehensive provider of top-tier<br>
+      website design and development experiences. Our software expertise spans design, mobile apps,<br>
+      e-commerce websites, UI/UX, and marketing. Our specialization in IT consulting services<br>
+      led to lasting client partnerships through innovative web solutions crafted by industry-leading<br>
+      software experts and recognized through numerous <span style="color: #6f42c1;">industry awards</span> on platforms like Clutch.
+    </p>
+
+    <!-- Marquee transition strip -->
+    <div class="overflow-hidden w-100 mb-5" style="position: absolute; top: 475px; left: 0; border-radius: 10px;">
+      <div class="d-flex animate-scroll px-5 py-3" style="white-space: nowrap; font-size: 2rem; gap: 200px;">
+        <span class="fw-bold">Web Design</span>
+        <span class="fw-bold">Web Development</span>
+        <span class="fw-bold">Mobile Development</span>
+        <span class="fw-bold">Figma Design</span>
+        <span class="fw-bold">IT Solution</span>
+        <span class="fw-bold">Software Company</span>
+        <span class="fw-bold">Web Design</span>
+        <span class="fw-bold">Web Development</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Big faded text -->
+  <h1 style="
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 180px;
+    color: #ffffff;
+    opacity: 0.25;
+    font-weight: 800;
+    white-space: nowrap;">
+    SINCE 2007
+  </h1>
+
+  
+  </section>
+
+  <!-- ================== Customized IT Consulting Services section -->
+   
+<section class="custom-it-section" style="width: 1723.24px; height: auto; margin: auto; padding: 40px;">
+   <h2 class="section-title" style="display: flex; justify-content: center; text-align: center; font-weight: bold; font-size: 36px; margin-bottom: 20px;">
+    Customized IT Consulting Services for Leading Sectors
+  </h2>
+  <p class="section-description" style="display: flex;   justify-content: center; text-align: center; max-width: 1000px; margin: 0 auto 40px auto; font-size: 18px; color: #555;">
+    At Keyideas, we specialize in providing IT consulting services and leveraging the  <br> expertise of our software experts to deliver tailored web solutions.
+  </p>
+
+  <div class="card-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;">
+    <!-- Row 1 -->
+    <div class="card-box purple-bg"><img class="card-img" src="./images/customized1.webp" alt="img1" /><p class="card-text">Events and Conference</p></div>
+    <div class="card-box purple-bg"><img class="card-img" src="./images/customized2.webp" alt="img2" /><p class="card-text">Fashion and Accessories</p></div>
+    <div class="card-box purple-bg"><img class="card-img" src="./images/customized3.webp" alt="img3" /><p class="card-text">Jewelry Website</p></div>
+    <div class="card-box purple-bg"><img class="card-img" src="./images/customized4.webp" alt="img4" /><p class="card-text">Warehouse Management</p></div>
+
+    <!-- Row 2 -->
+    <div class="card-box"><img class="card-img" src="./images/customized5.webp" alt="img5" /><p class="card-text">Automotive and Transportation</p></div>
+    <div class="card-box"><img class="card-img" src="./images/customized6.webp" alt="img6" /><p class="card-text">Education</p></div>
+    <div class="card-box"><img class="card-img" src="./images/customized7.webp" alt="img7" /><p class="card-text">Finance</p></div>
+    <div class="card-box"><img class="card-img" src="./images/customized8.webp" alt="img8" /><p class="card-text">Food and Beverages</p></div>
+
+    <!-- Row 3 -->
+    <div class="card-box"><img class="card-img" src="./images/customized9.webp" alt="img9" /><p class="card-text">Health and Medical</p></div>
+    <div class="card-box"><img class="card-img" src="./images/customized10.webp" alt="img10" /><p class="card-text">Heavy Equipments</p></div>
+    <div class="card-box"><img class="card-img" src="./images/customized11.webp" alt="img11" /><p class="card-text">Home and Repair</p></div>
+    <div class="card-box"><img class="card-img" src="./images/customized12.webp" alt="img12" /><p class="card-text">Industrial</p></div>
+
+    <!-- Row 4 (merged cols 2-4) -->
+   <div class="card-box"><img class="card-img" src="./images/customized13.webp" alt="img13" /><p class="card-text">Insurance</p></div>
+    <div class="card-box large-box" style="grid-column: span 3; height: 157.15px; width: 1168px; background: #f3f3f3; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid #e0e0e0;">
+      <img src="./images/Component 102.webp" alt="wide" style="width: 1168px; height: 157.15px;  " />
+    </div>
+
+    <!-- Row 5 -->
+    <div class="card-box"><img class="card-img" src="./images/customized14.webp" alt="img14" /><p class="card-text">Legal</p></div>
+    <div class="card-box"><img class="card-img" src="./images/customized15.webp" alt="img15" /><p class="card-text">Local Services</p></div>
+    <div class="card-box"><img class="card-img" src="./images/customized16.webp" alt="img16" /><p class="card-text">Real Estate</p></div>
+    <div class="card-box"><img class="card-img" src="./images/customized17.webp" alt="img17" /><p class="card-text">Recreation and Entertainment</p></div>
+
+    <!-- Row 6 -->
+    <div class="card-box"><img class="card-img" src="./images/customized18.webp" alt="img18" /><p class="card-text">Retail and E-Commerce</p></div>
+    <div class="card-box"><img class="card-img" src="./images/customized19.webp" alt="img19" /><p class="card-text">Professional Services</p></div>
+    <div class="card-box"><img class="card-img" src="./images/customized20.webp" alt="img20" /><p class="card-text">Tech</p></div>
+    <div class="card-box"><img class="card-img" src="./images/customized21.webp" alt="img21" /><p class="card-text">Tourism and Hospitality</p></div>
+  </div>
+
+
+</section>
+
+<!-- ================ Wide Ranging Expertise from leading software section ================ -->
+
+<section class="expertise-section text-center">
+    <div class="container">
+      <h2 class="expertise-heading mb-5">Wide-Ranging Expertise from Leading Software Experts</h2>
+      <p class="expertise-paragraph">
+        Our strength lies in delivering exceptional IT consulting services backed by a wide range of <br>
+        expertise in cutting-edge technologies. With our software experts, we craft innovative <br> solutions
+        that align with your business needs and also exceeding your expectations.
+      </p>
+
+      <!-- 10 Boxes (2 Rows of 5 Boxes) -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 justify-content-center g-5 mt-5">
+        <div class="col"><div class="expertise-box">Web Development</div></div>
+        <div class="col"><div class="expertise-box">Web Design</div></div>
+        <div class="col"><div class="expertise-box">Mobile Development</div></div>
+        <div class="col"><div class="expertise-box">IT Services</div></div>
+        <div class="col"><div class="expertise-box">Digital Experience</div></div>
+        <div class="col"><div class="expertise-box">Software Engineering</div></div>
+        <div class="col"><div class="expertise-box">Website & E-commerce</div></div>
+        <div class="col"><div class="expertise-box">Remote Team</div></div>
+        <div class="col"><div class="expertise-box">Online Marketing</div></div>
+        <div class="col"><div class="expertise-box">Top Development Services</div></div>
+      </div>
+
+      <!-- 16 Logos -->
+      <div class="row justify-content-center mt-5 gy-5">
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
+          <img src="./logos/React (1).webp" class="tech-logo" alt="React" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
+          <img src="./logos/talwind.webp" class="tech-logo" alt="Tailwind" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
+          <img src="./logos/css.webp" class="tech-logo" alt="CSS" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
+          <img src="./logos/bootstrap.webp" class="tech-logo" alt="Bootstrap" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
+          <img src="./logos/html.webp" class="tech-logo" alt="HTML5" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
+          <img src="./logos/javascript.webp" class="tech-logo" alt="JavaScript" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
+          <img src="./logos/sass.webp" class="tech-logo" alt="SASS" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
+          <img src="./logos/express.webp" class="tech-logo" alt="Express" />
+        </div>
+         <div class="row justify-content-center mt-5 g-4">
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
+          <img src="./logos/angular.webp" class="tech-logo" alt="Angular" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
+          <img src="./logos/ai.webp" class="tech-logo" alt="AI" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
+          <img src="./logos/aws.webp" class="tech-logo" alt="AWS" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
+          <img src="./logos/dbms.webp" class="tech-logo" alt="DBMS" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
+          <img src="./logos/laravel.webp" class="tech-logo" alt="Laravel" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
+          <img src="./logos/php.webp" class="tech-logo" alt="PHP" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
+          <img src="./logos/mongodb.webp" class="tech-logo" alt="mongodb" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
+          <img src="./logos/next.js.webp" class="tech-logo" alt="Next.js" />
+        </div>
+        <!-- Continue your other logos as needed -->
+      </div>
+    </div>
+  </section>
+
+<!-- ================ /* ================================================ Efficient Processes Tailored For IT Section */ -->
+
+<section class="process-section">
+  <div class="container text-center" >
+    <h2 class="fw-bold text-2xl">Efficient Processes Tailored for IT Consulting Services</h2>
+    <p class="section-description" style="margin-top: 80px;">
+      Maximizing digital product potential through data-driven insights and user-centric <br>
+      design for memorable user interactions led by software experts.
+    </p>
+
+    <div class="desc-row">
+      <!-- Block 1 -->
+      <div class="process-block">
+        <div class="top-badge">
+          <div class="badge-box">
+            <div class="badge-circle"></div>
+            <span>IN-DEPTH RESEARCH & ANALYSIS</span>
+            <div class="badge-check">✔</div>
+          </div>
+          <div class="connector"></div>
+        </div>
+        <div class="desc-box">
+          <p>Data Intelligence</p>
+          <p>Heuristic Evaluation</p>
+        </div>
+      </div>
+
+      <!-- Block 2 -->
+      <div class="process-block">
+        <div class="bottom-badge">
+          <div class="badge-box">
+            <div class="badge-circle"></div>
+            <span>STRUCTURED PLANNING & ROADMAP</span>
+            <div class="badge-check">✔</div>
+          </div>
+          <div class="connector"></div>
+        </div>
+        <div class="desc-box">
+          <p>Workflow Architecture</p>
+          <p>Feasibility Mapping</p>
+        </div>
+      </div>
+
+      <!-- Block 3 -->
+      <div class="process-block">
+        <div class="top-badge">
+          <div class="badge-box">
+            <div class="badge-circle"></div>
+            <span>DESIGN & EXPERIENCE</span>
+            <div class="badge-check">✔</div>
+          </div>
+          <div class="connector"></div>
+        </div>
+        <div class="desc-box">
+          <p>Interaction Modelling</p>
+          <p>Cognitive Load</p>
+        </div>
+      </div>
+
+      <!-- Block 4 -->
+      <div class="process-block">
+        <div class="bottom-badge">
+          <div class="badge-box">
+            <div class="badge-circle"></div>
+            <span>DEVELOPMENT & IMPLEMENTATION</span>
+            <div class="badge-check">✔</div>
+          </div>
+          <div class="connector"></div>
+        </div>
+        <div class="desc-box">
+          <p>Code Optimization</p>
+          <p>API Orchestration</p>
+        </div>
+      </div>
+
+      <!-- Block 5 -->
+      <div class="process-block">
+        <div class="top-badge">
+          <div class="badge-box">
+            <div class="badge-circle"></div>
+            <span>TESTING & OPTIMIZATION</span>
+            <div class="badge-check">✔</div>
+          </div>
+          <div class="connector"></div>
+        </div>
+        <div class="desc-box">
+          <p>Regression Analysis</p>
+          <p>Stress Testing</p>
+        </div>
+      </div>
+
+      <!-- Block 6 -->
+      <div class="process-block">
+        <div class="bottom-badge">
+          <div class="badge-box">
+            <div class="badge-circle"></div>
+            <span>DEPLOYMENT & MAINTENANCE</span>
+            <div class="badge-check">✔</div>
+          </div>
+          <div class="connector"></div>
+        </div>
+        <div class="desc-box">
+          <p>CI/CD Pipeline</p>
+          <p>Adaptive Scaling</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>                                                                                                                                                           
+
+
+<!-- ================= Social impact section ============ -->
+
+<section class="social-impact-section">
+    <div class="container">
+        <h2>
+            Social Impact: Making a Difference <br/>
+            through Corporate Responsibility
+        </h2>
+    </div>
+
+    <!-- images -->
+     <div class="circle-images">
+        <img src="./images/round1.webp" alt="image 1"/>
+        <img src="./images/round2.webp" alt="image 2"/>
+        <img src="./images/round3.webp" alt="image 3">
+        <img src="./images/round4.webp" alt="image 4">
+        <img src="./images/round5.webp" alt="image 5">
+        <img src="./images/round6.webp" alt="image 6">
+     </div>
+
+     <!-- paragraph -->
+
+     <div class="description-container">
+        <p class="description">
+            In the current business environment, social impact initiatives at KeyIdeas have become essential elements of our corporate strategy. These efforts extend beyond profit-making goals, striving to foster positive change and enhance societal well-being.
+        </p>
+        <a href="#" class="social-link">Social Responsibility</a>
+     </div>
+
+</section>
+
+
+<!-- ========================== Join Our Team Section ========= -->
+<div class="join-section">
+  <h2 class="join-title">Join Our Team: Work with Our Industry-Leading Software Experts</h2>
+  <p class="join-para">
+    At Keyideas, we’re always on the lookout for exceptional software experts and talented professionals
+    across technology, creativity, and business development. Explore our current job openings to join our dynamic team.
+  </p>
+  <div class="container-center-wrapper">
+  <div class="container-center">
+    <!-- Left: Two stacked images -->
+    <div class="d-flex flex-column align-center">
+      <img src="./images/join1.webp" alt="Team 1" class="img-small">
+      <img src="./images/join2.webp" alt="Team 2" class="img-small">
+    </div>
+
+    <!-- Center: Large office image -->
+    <div>
+      <img src="./images/join3.webp" alt="Office" class="img-large">
+    </div>
+
+    <!-- Right: One tall image + Job button -->
+    <div class="d-flex flex-column align-center">
+      <img src="./images/join4.webp" alt="Room" class="img-tall">
+      <button class="job-btn">Job Openings →</button>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+<!-- =============== FAQ Section -->
+
+<section class="faq-section mx-auto mt-5">
+  <div class="text-center mb-5">
+    <h2 class="faq-title">Comprehensive FAQ About Choosing the Right IT Consulting Company</h2>
+  </div>
+
+  <div class="d-flex justify-content-between gap-4 mb-5">
+    <!-- Left Side - FAQ Points -->
+    <div class="faq-left flex-grow-1 p-4 gap-5">
+      <ul class="faq-list">
+        <li><h4>1: What does an IT consulting company do?</h4></li>
+        <li><h4>2: What are the key factors when selecting an IT partner?</h4></li>
+        <li><h4>3: How much does IT consulting typically cost?</h4></li>
+        <li><h4>4: What industries benefit most from IT consultants?</h4></li>
+        <li><h4>5: How long does an average consulting engagement last?</h4></li>
+      </ul>
+    </div>
+
+    <!-- Right Side - Contact Card -->
+    <div class="faq-right p-4">
+      <h5 class="mb-3">Need Personalized Help?</h5>
+      <p class="mb-4">Get in touch with our team for customized IT consulting guidance.</p>
+
+      <form>
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Your Name">
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Your Email">
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" rows="3" placeholder="Your Message"></textarea>
+        </div>
+        <button class="btn btn-primary w-100">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bottom Small Headings -->
+  <div class="d-flex justify-content-between text-center small-headings">
+    <div class="faq-point">Why hire IT consultants?</div>
+    <div class="faq-point">Cost vs Value in IT consulting</div>
+    <div class="faq-point">Questions to ask your consultant</div>
+    <div class="faq-point">IT consulting trends in 2025</div>
+  </div>
+</section>
+
+
+
+<!-- =========== Discuss your ideas siction -->
+
+<search class="discuss-ideas-section">
+  <div class="discuss-box text-center">
+    <span class="discuss-text">Discuss Your Ideas Shortcode</span>
+  </div>
+</search>
+<br>
+
+<search class="discuss-ideas-section">
+  <div class="discuss-box text-center">
+    <span class="discuss-text">Footer Shortcode</span>
+  </div>
+</search>
+
+
+
+
+
+    <!-- Bootstrap JS Bundle with Popper -->    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
+
+<!-- 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+-->
