@@ -3,19 +3,75 @@
 
         // =================== Comprehensive IT consulting Section
 
-           const buttons = document.querySelectorAll(".tab-button");
-    const contents = document.querySelectorAll(".tab-content-box");
-
-    buttons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        buttons.forEach(b => b.classList.remove("active"));
-        contents.forEach(c => c.classList.remove("active"));
-
-        btn.classList.add("active");
-        document.getElementById(btn.dataset.tab).classList.add("active");
-        document.getElementById(btn.dataset.tab).scrollIntoView({ behavior: 'smooth' });
-      });
-    });
+            document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            
+            // Function to handle tab/accordion toggle
+            function handleTabClick(button) {
+                const tabId = button.getAttribute('data-tab');
+                const content = document.getElementById(tabId);
+                
+                if (window.innerWidth > 991.98) {
+                    // Desktop behavior - traditional tabs
+                    if (!button.classList.contains('active')) {
+                        // Remove active class from all buttons and content
+                        tabButtons.forEach(btn => btn.classList.remove('active'));
+                        document.querySelectorAll('.tab-content-box').forEach(box => {
+                            box.classList.remove('active');
+                        });
+                        
+                        // Add active class to clicked button and content
+                        button.classList.add('active');
+                        content.classList.add('active');
+                    }
+                } else {
+                    // Mobile behavior - accordion
+                    const isActive = button.classList.contains('active');
+                    
+                    // Toggle current button
+                    button.classList.toggle('active');
+                    content.style.display = isActive ? 'none' : 'flex';
+                }
+            }
+            
+            // Add click event to all buttons
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    handleTabClick(this);
+                });
+            });
+            
+            // Initialize first tab as active on desktop
+            if (window.innerWidth > 991.98) {
+                tabButtons[0].classList.add('active');
+                document.getElementById('tab1').classList.add('active');
+            }
+            
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 991.98) {
+                    // Switch to desktop mode
+                    document.querySelectorAll('.tab-content-box').forEach(box => {
+                        box.style.display = '';
+                    });
+                    
+                    // Make sure one tab is always active on desktop
+                    const activeTab = document.querySelector('.tab-button.active');
+                    if (!activeTab) {
+                        tabButtons[0].classList.add('active');
+                        document.getElementById('tab1').classList.add('active');
+                    }
+                } else {
+                    // Switch to mobile mode - close all initially
+                    tabButtons.forEach(button => {
+                        button.classList.remove('active');
+                    });
+                    document.querySelectorAll('.tab-content-box').forEach(box => {
+                        box.style.display = 'none';
+                    });
+                }
+            });
+        });
 
     // ===========================================
 
@@ -31,7 +87,7 @@
 
 
 
-    // ==============================
+    // ==========================================
 
     
   
