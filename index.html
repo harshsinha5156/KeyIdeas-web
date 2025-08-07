@@ -10,6 +10,7 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
      <!-- Google Fonts: Open Sans -->
      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+      <script src="https://cdn.tailwindcss.com"></script>
 
 
 
@@ -211,294 +212,427 @@
 
   <!--     /* ===================================== Experiences Crafted by our Software Experts. ==== */ -->
 
-  <section class="experience-section container">
-    <h2 class="text-center">Experiences Crafted by our Software Experts</h2>
+ <section class="experience-section max-w-[1528px] mx-auto mt-20 px-5 py-[70px] flex flex-col gap-8 items-center">
+        <h2 class="text-center text-4xl md:text-5xl font-bold text-black mb-12">Experiences Crafted by our Software Experts</h2>
 
-    <!-- Row 1 -->
-    <div class="experience-row">
-      <div class="experience-card card-1">
-      
-      </div>
-      <div class="experience-card card-2">
-        
-      </div>
-    </div>
+        <!-- Desktop/Tablet Layout (2×2 grid) -->
+        <div class="desktop-layout w-full hidden lg:block">
+            <!-- Row 1 -->
+            <div class="experience-row flex gap-8 w-full justify-between mb-8">
+                <div class="experience-card card-1 w-[890px] h-[375px] p-8">
+                   
+                </div>
+                <div class="experience-card card-2 w-[618px] h-[375px] p-8">
+                   
+                </div>
+            </div>
 
-    <!-- Row 2 -->
-    <div class="experience-row">
-      <div class="experience-card card-3">
-       
-      </div>
-      <div class="experience-card card-4">
-        
-      </div>
-    </div>
-  </section>
+            <!-- Row 2 -->
+            <div class="experience-row flex gap-8 w-full justify-between">
+                <div class="experience-card card-3 w-[618px] h-[375px] p-8">
+                    
+                </div>
+                <div class="experience-card card-4 w-[890px] h-[375px] p-8">
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Tablet Layout (Stacked cards) -->
+        <div class="tablet-layout w-full hidden md:block lg:hidden">
+            <div class="flex flex-col gap-8">
+                <div class="experience-card card-1 w-full h-[300px] p-8">
+                   
+                </div>
+                <div class="experience-card card-2 w-full h-[300px] p-8">
+                    
+                </div>
+                <div class="experience-card card-3 w-full h-[300px] p-8">
+                   
+                </div>
+                <div class="experience-card card-4 w-full h-[300px] p-8">
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Layout (Horizontal scroll) -->
+        <div class="mobile-layout w-full md:hidden">
+            <div class="mobile-scroll-container flex overflow-x-auto gap-4 pb-5 -mx-4 pl-4 snap-x snap-mandatory scroll-smooth">
+                <div class="experience-card min-w-[85%] h-[250px] p-5 snap-start flex-shrink-0">
+                    
+                </div>
+                <div class="experience-card min-w-[85%] h-[250px] p-5 snap-start flex-shrink-0">
+                   
+                </div>
+                <div class="experience-card min-w-[85%] h-[250px] p-5 snap-start flex-shrink-0">
+                   
+                </div>
+                <div class="experience-card min-w-[85%] h-[250px] p-5 snap-start flex-shrink-0">
+                   
+                </div>
+            </div>
+        </div>
+    </section>
 
 
   <!-- /* ===========================Success Stroies Powered by our IT ========== */ -->
 
-<section class="success-section container-fluid">
-  <h2 class="text-center fw-bold mb-5 heading-large">
-    Success Stories Powered by our IT Consulting Expertise
-  </h2>
+ <section class="success-section w-full px-5 py-10 md:py-16 max-w-7xl mx-auto">
+        <h2 class="text-center font-bold mb-12 text-3xl md:text-4xl lg:text-5xl mt-24 md:mt-36">
+            Success Stories Powered by our IT Consulting Expertise
+        </h2>
 
-  <!-- First Row -->
-  <div class="row g-4">
-    <!-- Card 1 -->
-    <div class="col-md-6">
-      <div class="success-box">
-        <img src="./images/success1.webp" alt="Success 1" />
-        <div class="overlay-text">
-          <!-- <h5>Real Estate & Property Management</h5>
-          <p>Efficient solutions for property listings, tenant management, and smooth project operations.</p> -->
-        </div>
-      </div>
-    </div>
+        <!-- Desktop/Tablet Layout (2×2 grid) -->
+        <div class="desktop-layout hidden md:block">
+            <!-- First Row -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                <!-- Card 1 -->
+                <div class="h-full">
+                    <div class="success-box h-full min-h-[400px]">
+                        <img src="./images/success1.webp" alt="Success 1" />
+                       
+                    </div>
+                </div>
 
-    <!-- Card 2 -->
-    <div class="col-md-6">
-      <div class="success-box">
-        <img src="./images/success2.webp" alt="Success 2" />
-        <div class="overlay-text">
-          <!-- <h5>E-Commerce Platforms</h5>
-          <p>Platforms with diverse products, easy payments, and faster delivery.</p> -->
-        </div>
-      </div>
-    </div>
-  </div>
+                <!-- Card 2 -->
+                <div class="h-full">
+                    <div class="success-box h-full min-h-[400px]">
+                        <img src="./images/success2.webp" alt="Success 2" />
+                        
+                    </div>
+                </div>
+            </div>
 
-  <!-- Second Row -->
-  <div class="row g-4 mt-2">
-    <!-- Card 3 -->
-    <div class="col-md-6">
-      <div class="success-box">
-        <img src="./images/success3.webp" alt="Fintech" />
-        <div class="overlay-text">
-          <!-- <h5>Finance & Fintech Solutions</h5>
-          <p>Innovative tools for simplified financial management and digital growth.</p> -->
-        </div>
-      </div>
-    </div>
+            <!-- Second Row -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-4 md:mt-6">
+                <!-- Card 3 -->
+                <div class="h-full">
+                    <div class="success-box h-full min-h-[400px]">
+                        <img src="./images/success3.webp" alt="Fintech" />
+                       
+                    </div>
+                </div>
 
-    <!-- Card 4 -->
-    <div class="col-md-6">
-      <div class="success-box">
-        <img src="./images/success4.webp" alt="Contractor Services" />
-        <div class="overlay-text">
-          <!-- <h5>Contractor & Home Services</h5>
-          <p>Solutions for contracting, maintenance, and remodeling needs.</p> -->
+                <!-- Card 4 -->
+                <div class="h-full">
+                    <div class="success-box h-full min-h-[400px]">
+                        <img src="./images/success3.webp" alt="Contractor Services" />
+                        
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+
+        <!-- Mobile Layout (Horizontal scroll) -->
+        <div class="mobile-layout md:hidden">
+            <div class="mobile-scroll-container flex overflow-x-auto gap-4 pb-5 -mx-4 pl-4 snap-x snap-mandatory scroll-smooth">
+                <!-- Card 1 -->
+                <div class="success-box min-w-[85%] h-[300px] snap-start flex-shrink-0">
+                    <img src="./images/success1.webp" alt="Success 1" />
+                   
+                </div>
+
+                <!-- Card 2 -->
+                <div class="success-box min-w-[85%] h-[300px] snap-start flex-shrink-0">
+                    <img src="./images/success2.webp" alt="Success 2" />
+                    
+                </div>
+
+                <!-- Card 3 -->
+                <div class="success-box min-w-[85%] h-[300px] snap-start flex-shrink-0">
+                    <img src="./images/success3.webp" alt="Fintech" />
+                   
+                </div>
+
+                <!-- Card 4 -->
+                <div class="success-box min-w-[85%] h-[300px] snap-start flex-shrink-0">
+                    <img src="./images/success4.webp" alt="Contractor Services" />
+                   
+                </div>
+            </div>
+        </div>
+    </section>
 
 
   <!-- =======================  Trusted Software for Small and Medium-sized section ======= -->
-  <section style="background-color: #ebe2fb; width: 100%; height: 750px; position: relative; overflow: hidden; margin-top: 100px; margin-bottom: 50px;">
-  <div class="container pt-5 d-flex flex-column align-items-center text-center">
-    <h2 class="fw-bold mb-3" style="font-size: 2.6rem; text-align: center;">
-      Trusted Software Experts for Small and Medium-Sized Clients
-    </h2>
-    <p class="w-75 mx-auto mb-7 mt-5" style="text-align: center; line-height: 1.8; font-size: 1.25rem;">
-      In 2007, our journey in IT consulting services began as a software development agency.<br>
-      Since then, we've continually progressed, evolving into a comprehensive provider of top-tier<br>
-      website design and development experiences. Our software expertise spans design, mobile apps,<br>
-      e-commerce websites, UI/UX, and marketing. Our specialization in IT consulting services<br>
-      led to lasting client partnerships through innovative web solutions crafted by industry-leading<br>
-      software experts and recognized through numerous <span style="color: #6f42c1;">industry awards</span> on platforms like Clutch.
-    </p>
 
-    <!-- Marquee transition strip -->
-    <div class="overflow-hidden w-100 mb-5" style="position: absolute; top: 400px; left: 0; border-radius: 10px;">
-      <div class="d-flex animate-scroll px-5 py-3" style="white-space: nowrap; font-size: 2rem; gap: 200px;">
-        <span class="fw-bold">Web Design</span>
-        <span class="fw-bold">Web Development</span>
-        <span class="fw-bold">Mobile Development</span>
-        <span class="fw-bold">Figma Design</span>
-        <span class="fw-bold">IT Solution</span>
-        <span class="fw-bold">Software Company</span>
-        <span class="fw-bold">Web Design</span>
-        <span class="fw-bold">Web Development</span>
-      </div>
-    </div>
-  </div>
+  <section class="w-full relative overflow-hidden pt-16 pb-40 md:pt-24 md:pb-56" style="background-color: #ebe2fb;">
+        <div class="container mx-auto px-5 flex flex-col items-center text-center">
+            
+            <!-- Heading -->
+            <h2 class="font-bold mb-6 text-3xl sm:text-4xl md:text-[2.6rem] text-center max-w-4xl">
+                Trusted Software Experts for Small and Medium-Sized Clients
+            </h2>
+            
+            <!-- Paragraph with safe margin -->
+            <div class="mx-auto mb-10 sm:mb-16 md:mb-20 lg:mb-28 px-2 max-w-3xl">
+                <p class="text-base sm:text-lg md:text-xl leading-relaxed sm:leading-loose">
+                    In 2007, our journey in IT consulting services began as a software development agency.
+                    Since then, we've continually progressed, evolving into a comprehensive provider of top-tier
+                    website design and development experiences. Our software expertise spans design, mobile apps,
+                    e-commerce websites, UI/UX, and marketing. Our specialization in IT consulting services
+                    led to lasting client partnerships through innovative web solutions crafted by industry-leading
+                    software experts and recognized through numerous <span class="text-purple-600">industry awards</span> on platforms like Clutch.
+                </p>
+            </div>
 
-  <!-- Big faded text -->
-  <h1 style="
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 180px;
-    color: #ffffff;
-    opacity: 0.25;
-    font-weight: 800;
-    white-space: nowrap;">
-    SINCE 2007
-  </h1>
-</section>
+            <!-- Marquee strip with safe positioning -->
+            <div class="w-full overflow-hidden mt-auto mb-10 sm:mb-16 rounded-lg py-3">
+                <div class="flex animate-scroll px-5 gap-16 sm:gap-24 md:gap-32 lg:gap-48 whitespace-nowrap text-xl sm:text-2xl md:text-3xl font-bold">
+                    <span>Web Design</span>
+                    <span>Web Development</span>
+                    <span>Mobile Development</span>
+                    <span>Figma Design</span>
+                    <span>IT Solution</span>
+                    <span>Software Company</span>
+                    <span>Web Design</span>
+                    <span>Web Development</span>
+                </div>
+            </div>
+
+            <!-- Big faded text at bottom -->
+            <h1 class="absolute bottom-5 left-1/2 transform -translate-x-1/2 text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[180px] text-white opacity-25 font-extrabold whitespace-nowrap">
+                SINCE 2007
+            </h1>
+        </div>
+    </section>
 
   <!-- ================== Customized IT Consulting Services section -->
-   
-<section class="custom-it-section">
-  <h2 class="section-title">
-    Customized IT Consulting Services for Leading Sectors
-  </h2>
-  <p class="section-description">
-    At Keyideas, we specialize in providing IT consulting services and leveraging the <br />
-    expertise of our software experts to deliver tailored web solutions.
-  </p>
+<section class="w-full px-5 py-10 md:py-16 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-5">
+                Customized IT Consulting Services for Leading Sectors
+            </h2>
+            <p class="text-base md:text-lg text-gray-600 text-center max-w-4xl mx-auto mb-10">
+                At Keyideas, we specialize in providing IT consulting services and leveraging the 
+                expertise of our software experts to deliver tailored web solutions.
+            </p>
 
-  <div class="card-grid">
-    <!-- Cards -->
-    <div class="card-box purple-bg"><img class="card-img" src="./images/customized1.webp" alt="img1" /><p class="card-text">Events and Conference</p></div>
-    <div class="card-box purple-bg"><img class="card-img" src="./images/customized2.webp" alt="img2" /><p class="card-text">Fashion and Accessories</p></div>
-    <div class="card-box purple-bg"><img class="card-img" src="./images/customized3.webp" alt="img3" /><p class="card-text">Jewelry Website</p></div>
-    <div class="card-box purple-bg"><img class="card-img" src="./images/customized4.webp" alt="img4" /><p class="card-text">Warehouse Management</p></div>
+            <!-- Card Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                <!-- First 8 cards (always visible) -->
+                <div class="card-box purple-bg">
+                    <img class="card-img" src="./images/customized1.webp" alt="Events" />
+                    <p class="text-sm md:text-base font-medium">Events and Conference</p>
+                </div>
+                <div class="card-box purple-bg">
+                    <img class="card-img" src="./images/customized2.webp" alt="Fashion" />
+                    <p class="text-sm md:text-base font-medium">Fashion and Accessories</p>
+                </div>
+                <div class="card-box purple-bg">
+                    <img class="card-img" src="./images/customized3.webp" alt="Jewelry" />
+                    <p class="text-sm md:text-base font-medium">Jewelry Website</p>
+                </div>
+                <div class="card-box purple-bg">
+                    <img class="card-img" src="./images/customized4.webp" alt="Warehouse" />
+                    <p class="text-sm md:text-base font-medium">Warehouse Management</p>
+                </div>
+                <div class="card-box">
+                    <img class="card-img" src="./images/customized5.webp" alt="Automotive" />
+                    <p class="text-sm md:text-base font-medium">Automotive and Transportation</p>
+                </div>
+                <div class="card-box">
+                    <img class="card-img" src="./images/customized6.webp" alt="Education" />
+                    <p class="text-sm md:text-base font-medium">Education</p>
+                </div>
+                <div class="card-box">
+                    <img class="card-img" src="./images/customized7.webp" alt="Finance" />
+                    <p class="text-sm md:text-base font-medium">Finance</p>
+                </div>
+                <div class="card-box">
+                    <img class="card-img" src="./images/customized8.webp" alt="Food" />
+                    <p class="text-sm md:text-base font-medium">Food and Beverages</p>
+                </div>
 
-    <div class="card-box"><img class="card-img" src="./images/customized5.webp" alt="img5" /><p class="card-text">Automotive and Transportation</p></div>
-    <div class="card-box"><img class="card-img" src="./images/customized6.webp" alt="img6" /><p class="card-text">Education</p></div>
-    <div class="card-box"><img class="card-img" src="./images/customized7.webp" alt="img7" /><p class="card-text">Finance</p></div>
-    <div class="card-box"><img class="card-img" src="./images/customized8.webp" alt="img8" /><p class="card-text">Food and Beverages</p></div>
+                <!-- Remaining cards (hidden on mobile initially) -->
+                <div class="card-box mobile-hidden">
+                    <img class="card-img" src="./images/customized9.webp" alt="Health" />
+                    <p class="text-sm md:text-base font-medium">Health and Medical</p>
+                </div>
+                <div class="card-box mobile-hidden">
+                    <img class="card-img" src="./images/customized10.webp" alt="Equipment" />
+                    <p class="text-sm md:text-base font-medium">Heavy Equipments</p>
+                </div>
+                <div class="card-box mobile-hidden">
+                    <img class="card-img" src="./images/customized11.webp" alt="Home" />
+                    <p class="text-sm md:text-base font-medium">Home and Repair</p>
+                </div>
+                <div class="card-box mobile-hidden">
+                    <img class="card-img" src="./images/customized12.webp" alt="Industrial" />
+                    <p class="text-sm md:text-base font-medium">Industrial</p>
+                </div>
+                <div class="card-box mobile-hidden">
+                    <img class="card-img" src="./images/customized13.webp" alt="Insurance" />
+                    <p class="text-sm md:text-base font-medium">Insurance</p>
+                </div>
+                <div class="large-box mobile-hidden">
+                    <img src="./images/Component 102.webp" alt="Banner" class="full-banner-img" />
+                </div>
+                <div class="card-box mobile-hidden">
+                    <img class="card-img" src="./images/customized13.webp" alt="Legal" />
+                    <p class="text-sm md:text-base font-medium">Legal</p>
+                </div>
+                <div class="card-box mobile-hidden">
+                    <img class="card-img" src="./images/customized14.webp" alt="Local" />
+                    <p class="text-sm md:text-base font-medium">Local Services</p>
+                </div>
+                <div class="card-box mobile-hidden">
+                    <img class="card-img" src="./images/customized15.webp" alt="Real Estate" />
+                    <p class="text-sm md:text-base font-medium">Real Estate</p>
+                </div>
+                <div class="card-box mobile-hidden">
+                    <img class="card-img" src="./images/customized16.webp" alt="Entertainment" />
+                    <p class="text-sm md:text-base font-medium">Recreation and Entertainment</p>
+                </div>
+                <div class="card-box mobile-hidden">
+                    <img class="card-img" src="./images/customized17.webp" alt="E-commerce" />
+                    <p class="text-sm md:text-base font-medium">Retail and E-Commerce</p>
+                </div>
+                <div class="card-box mobile-hidden">
+                    <img class="card-img" src="./images/customized18.webp" alt="Professional" />
+                    <p class="text-sm md:text-base font-medium">Professional Services</p>
+                </div>
+                <div class="card-box mobile-hidden">
+                    <img class="card-img" src="./images/customized19.webp" alt="Tech" />
+                    <p class="text-sm md:text-base font-medium">Tech</p>
+                </div>
+                <div class="card-box mobile-hidden">
+                    <img class="card-img" src="./images/customized20.webp" alt="Tourism" />
+                    <p class="text-sm md:text-base font-medium">Tourism and Hospitality</p>
+                </div>
+            </div>
 
-    <div class="card-box"><img class="card-img" src="./images/customized9.webp" alt="img9" /><p class="card-text">Health and Medical</p></div>
-    <div class="card-box"><img class="card-img" src="./images/customized10.webp" alt="img10" /><p class="card-text">Heavy Equipments</p></div>
-    <div class="card-box"><img class="card-img" src="./images/customized11.webp" alt="img11" /><p class="card-text">Home and Repair</p></div>
-    <div class="card-box"><img class="card-img" src="./images/customized12.webp" alt="img12" /><p class="card-text">Industrial</p></div>
-
-    <div class="card-box"><img class="card-img" src="./images/customized13.webp" alt="img13" /><p class="card-text">Insurance</p></div>
-    <div class="card-box large-box" style="grid-column: span 3;">
-      <img src="./images/Component 102.webp" alt="wide" class="full-banner-img" />
-    </div>
-
-    <div class="card-box"><img class="card-img" src="./images/customized14.webp" alt="img14" /><p class="card-text">Legal</p></div>
-    <div class="card-box"><img class="card-img" src="./images/customized15.webp" alt="img15" /><p class="card-text">Local Services</p></div>
-    <div class="card-box"><img class="card-img" src="./images/customized16.webp" alt="img16" /><p class="card-text">Real Estate</p></div>
-    <div class="card-box"><img class="card-img" src="./images/customized17.webp" alt="img17" /><p class="card-text">Recreation and Entertainment</p></div>
-
-    <div class="card-box"><img class="card-img" src="./images/customized18.webp" alt="img18" /><p class="card-text">Retail and E-Commerce</p></div>
-    <div class="card-box"><img class="card-img" src="./images/customized19.webp" alt="img19" /><p class="card-text">Professional Services</p></div>
-    <div class="card-box"><img class="card-img" src="./images/customized20.webp" alt="img20" /><p class="card-text">Tech</p></div>
-    <div class="card-box"><img class="card-img" src="./images/customized21.webp" alt="img21" /><p class="card-text">Tourism and Hospitality</p></div>
-  </div>
-</section>
+            <!-- Show More Button (Mobile only) -->
+            <div class="mt-8 flex justify-center md:hidden">
+                <button id="showMoreBtn" class="flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-lg shadow-md hover:bg-purple-700 transition-colors">
+                    <span>Show More</span>
+                    <svg id="chevron" class="rotate-chevron w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
 
 
 <!-- ================ Wide Ranging Expertise from leading software section ================ -->
 
-<section class="expertise-section text-center">
+ <section class="w-full py-[60px] bg-[#fdfdfd]">
     <div class="container-fluid px-0">
-      <div class="container">
-        <h2 class="expertise-heading mb-5">Wide-Ranging Expertise from Leading Software Experts</h2>
-        <p class="expertise-paragraph">
+      <div class="max-w-[1200px] mx-auto px-[15px]">
+        <h2 class="text-[2.2rem] font-bold leading-[1.2] mb-5 text-center">Wide-Ranging Expertise from Leading Software Experts</h2>
+        <p class="text-base max-w-[800px] mx-auto mb-10 text-[#444] leading-[1.6] text-center">
           Our strength lies in delivering exceptional IT consulting services backed by a wide range of 
           expertise in cutting-edge technologies. With our software experts, we craft innovative solutions
           that align with your business needs and also exceeding your expectations.
         </p>
 
         <!-- 10 Boxes in 2 Rows of 5 Columns -->
-        <div class="row justify-content-center g-4 mb-4">
+        <div class="mb-10">
           <!-- First Row - 5 Boxes -->
-          <div class="col-6 col-sm-4 col-md-4 col-lg-2-4 d-flex justify-content-center">
-            <div class="expertise-box">Web Development</div>
+          <div class="flex flex-wrap mx-[-10px] mb-5">
+            <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 px-[10px] mb-5">
+              <div class="expertise-box">Web Development</div>
+            </div>
+            <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 px-[10px] mb-5">
+              <div class="expertise-box">Web Design</div>
+            </div>
+            <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 px-[10px] mb-5">
+              <div class="expertise-box">Mobile Development</div>
+            </div>
+            <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 px-[10px] mb-5">
+              <div class="expertise-box">IT Services</div>
+            </div>
+            <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 px-[10px] mb-5">
+              <div class="expertise-box">Digital Experience</div>
+            </div>
           </div>
-          <div class="col-6 col-sm-4 col-md-4 col-lg-2-4 d-flex justify-content-center">
-            <div class="expertise-box">Web Design</div>
-          </div>
-          <div class="col-6 col-sm-4 col-md-4 col-lg-2-4 d-flex justify-content-center">
-            <div class="expertise-box">Mobile Development</div>
-          </div>
-          <div class="col-6 col-sm-4 col-md-4 col-lg-2-4 d-flex justify-content-center">
-            <div class="expertise-box">IT Services</div>
-          </div>
-          <div class="col-6 col-sm-4 col-md-4 col-lg-2-4 d-flex justify-content-center">
-            <div class="expertise-box">Digital Experience</div>
-          </div>
-        </div>
-        
-        <div class="row justify-content-center g-4 mb-5">
+          
           <!-- Second Row - 5 Boxes -->
-          <div class="col-6 col-sm-4 col-md-4 col-lg-2-4 d-flex justify-content-center">
-            <div class="expertise-box">Software Engineering</div>
-          </div>
-          <div class="col-6 col-sm-4 col-md-4 col-lg-2-4 d-flex justify-content-center">
-            <div class="expertise-box">Website & E-commerce</div>
-          </div>
-          <div class="col-6 col-sm-4 col-md-4 col-lg-2-4 d-flex justify-content-center">
-            <div class="expertise-box">Remote Team</div>
-          </div>
-          <div class="col-6 col-sm-4 col-md-4 col-lg-2-4 d-flex justify-content-center">
-            <div class="expertise-box">Online Marketing</div>
-          </div>
-          <div class="col-6 col-sm-4 col-md-4 col-lg-2-4 d-flex justify-content-center">
-            <div class="expertise-box">Top Development Services</div>
+          <div class="flex flex-wrap mx-[-10px]">
+            <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 px-[10px] mb-5">
+              <div class="expertise-box">Software Engineering</div>
+            </div>
+            <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 px-[10px] mb-5">
+              <div class="expertise-box">Website & E-commerce</div>
+            </div>
+            <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 px-[10px] mb-5">
+              <div class="expertise-box">Remote Team</div>
+            </div>
+            <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 px-[10px] mb-5">
+              <div class="expertise-box">Online Marketing</div>
+            </div>
+            <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 px-[10px] mb-5">
+              <div class="expertise-box">Top Development Services</div>
+            </div>
           </div>
         </div>
 
         <!-- 16 Logos in 4 rows of 4 -->
-        <div class="row justify-content-center g-4">
+        <div class="mt-8">
           <!-- Row 1 -->
-          <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
-            <img src="./logos/React (1).webp" class="tech-logo" alt="React" />
+          <div class="flex flex-wrap mx-[-10px] mb-5">
+            <div class="w-1/2 sm:w-1/4 px-[10px] mb-5">
+              <img src="./logos/React (1).webp" class="tech-logo mx-auto" alt="React" />
+            </div>
+            <div class="w-1/2 sm:w-1/4 px-[10px] mb-5">
+              <img src="./logos/talwind.webp" class="tech-logo mx-auto" alt="Tailwind" />
+            </div>
+            <div class="w-1/2 sm:w-1/4 px-[10px] mb-5">
+              <img src="./logos/css.webp" class="tech-logo mx-auto" alt="CSS" />
+            </div>
+            <div class="w-1/2 sm:w-1/4 px-[10px] mb-5">
+              <img src="./logos/bootstrap.webp" class="tech-logo mx-auto" alt="Bootstrap" />
+            </div>
           </div>
-          <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
-            <img src="./logos/talwind.webp" class="tech-logo" alt="Tailwind" />
-          </div>
-          <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
-            <img src="./logos/css.webp" class="tech-logo" alt="CSS" />
-          </div>
-          <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
-            <img src="./logos/bootstrap.webp" class="tech-logo" alt="Bootstrap" />
-          </div>
-        </div>
-        
-        <div class="row justify-content-center g-4">
+          
           <!-- Row 2 -->
-          <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
-            <img src="./logos/html.webp" class="tech-logo" alt="HTML5" />
+          <div class="flex flex-wrap mx-[-10px] mb-5">
+            <div class="w-1/2 sm:w-1/4 px-[10px] mb-5">
+              <img src="./logos/html.webp" class="tech-logo mx-auto" alt="HTML5" />
+            </div>
+            <div class="w-1/2 sm:w-1/4 px-[10px] mb-5">
+              <img src="./logos/javascript.webp" class="tech-logo mx-auto" alt="JavaScript" />
+            </div>
+            <div class="w-1/2 sm:w-1/4 px-[10px] mb-5">
+              <img src="./logos/sass.webp" class="tech-logo mx-auto" alt="SASS" />
+            </div>
+            <div class="w-1/2 sm:w-1/4 px-[10px] mb-5">
+              <img src="./logos/express.webp" class="tech-logo mx-auto" alt="Express" />
+            </div>
           </div>
-          <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
-            <img src="./logos/javascript.webp" class="tech-logo" alt="JavaScript" />
-          </div>
-          <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
-            <img src="./logos/sass.webp" class="tech-logo" alt="SASS" />
-          </div>
-          <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
-            <img src="./logos/express.webp" class="tech-logo" alt="Express" />
-          </div>
-        </div>
-        
-        <div class="row justify-content-center g-4">
+          
           <!-- Row 3 -->
-          <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
-            <img src="./logos/angular.webp" class="tech-logo" alt="Angular" />
+          <div class="flex flex-wrap mx-[-10px] mb-5">
+            <div class="w-1/2 sm:w-1/4 px-[10px] mb-5">
+              <img src="./logos/angular.webp" class="tech-logo mx-auto" alt="Angular" />
+            </div>
+            <div class="w-1/2 sm:w-1/4 px-[10px] mb-5">
+              <img src="./logos/ai.webp" class="tech-logo mx-auto" alt="AI" />
+            </div>
+            <div class="w-1/2 sm:w-1/4 px-[10px] mb-5">
+              <img src="./logos/aws.webp" class="tech-logo mx-auto" alt="AWS" />
+            </div>
+            <div class="w-1/2 sm:w-1/4 px-[10px] mb-5">
+              <img src="./logos/dbms.webp" class="tech-logo mx-auto" alt="DBMS" />
+            </div>
           </div>
-          <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
-            <img src="./logos/ai.webp" class="tech-logo" alt="AI" />
-          </div>
-          <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
-            <img src="./logos/aws.webp" class="tech-logo" alt="AWS" />
-          </div>
-          <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
-            <img src="./logos/dbms.webp" class="tech-logo" alt="DBMS" />
-          </div>
-        </div>
-        
-        <div class="row justify-content-center g-4">
+          
           <!-- Row 4 -->
-          <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
-            <img src="./logos/laravel.webp" class="tech-logo" alt="Laravel" />
-          </div>
-          <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
-            <img src="./logos/php.webp" class="tech-logo" alt="PHP" />
-          </div>
-          <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
-            <img src="./logos/mongodb.webp" class="tech-logo" alt="mongodb" />
-          </div>
-          <div class="col-6 col-sm-4 col-md-3 col-lg-3 d-flex justify-content-center">
-            <img src="./logos/next.js.webp" class="tech-logo" alt="Next.js" />
+          <div class="flex flex-wrap mx-[-10px]">
+            <div class="w-1/2 sm:w-1/4 px-[10px] mb-5">
+              <img src="./logos/laravel.webp" class="tech-logo mx-auto" alt="Laravel" />
+            </div>
+            <div class="w-1/2 sm:w-1/4 px-[10px] mb-5">
+              <img src="./logos/php.webp" class="tech-logo mx-auto" alt="PHP" />
+            </div>
+            <div class="w-1/2 sm:w-1/4 px-[10px] mb-5">
+              <img src="./logos/mongodb.webp" class="tech-logo mx-auto" alt="mongodb" />
+            </div>
+            <div class="w-1/2 sm:w-1/4 px-[10px] mb-5">
+              <img src="./logos/next.js.webp" class="tech-logo mx-auto" alt="Next.js" />
+            </div>
           </div>
         </div>
       </div>
@@ -507,16 +641,16 @@
 
 <!-- ================ /* ================================================ Efficient Processes Tailored For IT Section */ -->
 
-<section class="process-section">
-  <div class="container-fluid px-0">
-    <div class="container text-center">
+ <section class="process-section">
+    <div class="container mx-auto px-4 text-center">
       <h2 class="process-heading">Efficient Processes Tailored for IT Consulting Services</h2>
       <p class="section-description">
         Maximizing digital product potential through data-driven insights and user-centric
         design for memorable user interactions led by software experts.
       </p>
 
-      <div class="process-flow">
+      <!-- Desktop/Tablet Layout -->
+      <div class="desktop-process">
         <!-- Block 1 -->
         <div class="process-block">
           <div class="top-badge">
@@ -613,74 +747,187 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>                                                                                                                                                        
 
+      <!-- Mobile Layout -->
+      <div class="mobile-process">
+        <!-- Block 1 -->
+        <div class="mobile-process-block">
+          <div class="mobile-badge-box">
+            <div class="badge-circle"></div>
+            <span>1. IN-DEPTH RESEARCH & ANALYSIS</span>
+            <div class="badge-check">✔</div>
+          </div>
+          <div class="mobile-desc-box">
+            <p>• Data Intelligence</p>
+            <p>• Heuristic Evaluation</p>
+          </div>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="mobile-process-block">
+          <div class="mobile-badge-box">
+            <div class="badge-circle"></div>
+            <span>2. STRUCTURED PLANNING & ROADMAP</span>
+            <div class="badge-check">✔</div>
+          </div>
+          <div class="mobile-desc-box">
+            <p>• Workflow Architecture</p>
+            <p>• Feasibility Mapping</p>
+          </div>
+        </div>
+
+        <!-- Block 3 -->
+        <div class="mobile-process-block">
+          <div class="mobile-badge-box">
+            <div class="badge-circle"></div>
+            <span>3. DESIGN & EXPERIENCE</span>
+            <div class="badge-check">✔</div>
+          </div>
+          <div class="mobile-desc-box">
+            <p>• Interaction Modelling</p>
+            <p>• Cognitive Load</p>
+          </div>
+        </div>
+
+        <!-- Block 4 -->
+        <div class="mobile-process-block">
+          <div class="mobile-badge-box">
+            <div class="badge-circle"></div>
+            <span>4. DEVELOPMENT & IMPLEMENTATION</span>
+            <div class="badge-check">✔</div>
+          </div>
+          <div class="mobile-desc-box">
+            <p>• Code Optimization</p>
+            <p>• API Orchestration</p>
+          </div>
+        </div>
+
+        <!-- Block 5 -->
+        <div class="mobile-process-block">
+          <div class="mobile-badge-box">
+            <div class="badge-circle"></div>
+            <span>5. TESTING & OPTIMIZATION</span>
+            <div class="badge-check">✔</div>
+          </div>
+          <div class="mobile-desc-box">
+            <p>• Regression Analysis</p>
+            <p>• Stress Testing</p>
+          </div>
+        </div>
+
+        <!-- Block 6 -->
+        <div class="mobile-process-block">
+          <div class="mobile-badge-box">
+            <div class="badge-circle"></div>
+            <span>6. DEPLOYMENT & MAINTENANCE</span>
+            <div class="badge-check">✔</div>
+          </div>
+          <div class="mobile-desc-box">
+            <p>• CI/CD Pipeline</p>
+            <p>• Adaptive Scaling</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 <!-- ================= Social impact section ============ -->
 
-<section class="social-impact-section">
-    <div class="container">
-        <h2>
-            Social Impact: Making a Difference <br/>
-            through Corporate Responsibility
-        </h2>
-    </div>
+ <section class="social-impact-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold pb-5 mx-auto max-w-4xl">
+                Social Impact: Making a Difference <br/>
+                through Corporate Responsibility
+            </h2>
 
-    <!-- images -->
-     <div class="circle-images">
-        <img src="./images/round1.webp" alt="image 1"/>
-        <img src="./images/round2.webp" alt="image 2"/>
-        <img src="./images/round3.webp" alt="image 3">
-        <img src="./images/round4.webp" alt="image 4">
-        <img src="./images/round5.webp" alt="image 5">
-        <img src="./images/round6.webp" alt="image 6">
-     </div>
+            <!-- Desktop Version (single row) -->
+            <div class="circle-images desktop">
+                <img src="./images/round1.webp" alt="image 1"/>
+                <img src="./images/round2.webp" alt="image 2"/>
+                <img src="./images/round3.webp" alt="image 3">
+                <img src="./images/round4.webp" alt="image 4">
+                <img src="./images/round5.webp" alt="image 5">
+                <img src="./images/round6.webp" alt="image 6">
+            </div>
 
-     <!-- paragraph -->
+            <!-- Mobile Version (2 rows) -->
+            <div class="circle-images mobile">
+                <!-- First Row -->
+                <img src="./images/round1.webp" alt="image 1"/>
+                <img src="./images/round2.webp" alt="image 2"/>
+                <img src="./images/round3.webp" alt="image 3">
+                
+                <!-- Second Row -->
+                <img src="./images/round4.webp" alt="image 4">
+                <img src="./images/round5.webp" alt="image 5">
+                <img src="./images/round6.webp" alt="image 6">
+            </div>
 
-     <div class="description-container">
-        <p class="description">
-            In the current business environment, social impact initiatives at KeyIdeas have become essential elements of our corporate strategy. These efforts extend beyond profit-making goals, striving to foster positive change and enhance societal well-being.
+            <!-- paragraph -->
+            <div class="description-container mx-auto px-5 max-w-4xl">
+                <p class="description">
+                    In the current business environment, social impact initiatives at KeyIdeas have become essential elements of our corporate strategy. These efforts extend beyond profit-making goals, striving to foster positive change and enhance societal well-being.
+                </p>
+                <a href="#" class="social-link">Social Responsibility</a>
+            </div>
+        </div>
+    </section>
+
+
+<!-- ========================== Join Our Team Section ======================= -->          
+  <div class="join-section">
+        <h2 class="join-title">Join Our Team: Work with Our Industry-Leading Software Experts</h2>
+        <p class="join-para">
+            At Keyideas, we're always on the lookout for exceptional software experts and talented professionals
+            across technology, creativity, and business development. Explore our current job openings to join our dynamic team.
         </p>
-        <a href="#" class="social-link">Social Responsibility</a>
-     </div>
+        <div class="container-center-wrapper">
+            <div class="container-center">
+                <!-- Desktop Layout -->
+                <div class="hidden md:flex md:flex-col md:items-center">
+                    <img src="./images/join1.webp" alt="Team 1" class="img-small">
+                    <img src="./images/join2.webp" alt="Team 2" class="img-small">
+                </div>
 
-</section>
+                <div class="hidden md:block">
+                    <img src="./images/join3.webp" alt="Office" class="img-large">
+                </div>
 
+                <div class="hidden md:flex md:flex-col md:items-center">
+                    <img src="./images/join4.webp" alt="Room" class="img-tall">
+                    <button class="job-btn">Job Openings →</button>
+                </div>
 
-<!-- ========================== Join Our Team Section ========= -->
-<div class="join-section">
-  <h2 class="join-title">Join Our Team: Work with Our Industry-Leading Software Experts</h2>
-  <p class="join-para">
-    At Keyideas, we’re always on the lookout for exceptional software experts and talented professionals
-    across technology, creativity, and business development. Explore our current job openings to join our dynamic team.
-  </p>
-  <div class="container-center-wrapper">
-  <div class="container-center">
-    <!-- Left: Two stacked images -->
-    <div class="d-flex flex-column align-center">
-      <img src="./images/join1.webp" alt="Team 1" class="img-small">
-      <img src="./images/join2.webp" alt="Team 2" class="img-small">
+                <!-- Mobile Layout -->
+                <div class="md:hidden w-full">
+                    <!-- First Row - Full width office image -->
+                    <div class="mobile-first-row">
+                        <img src="./images/join3.webp" alt="Office" class="img-large">
+                    </div>
+
+                    <!-- Second Row - 3 images horizontal scroll -->
+                    <div class="mobile-second-row">
+                        <div>
+                            <img src="./images/join1.webp" alt="Team 1" class="img-small">
+                        </div>
+                        <div>
+                            <img src="./images/join2.webp" alt="Team 2" class="img-small">
+                        </div>
+                        <div>
+                            <img src="./images/join4.webp" alt="Room" class="img-tall">
+                            <div class="job-btn-container">
+                                <button class="job-btn">Job Openings →</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Center: Large office image -->
-    <div>
-      <img src="./images/join3.webp" alt="Office" class="img-large">
-    </div>
-
-    <!-- Right: One tall image + Job button -->
-    <div class="d-flex flex-column align-center">
-      <img src="./images/join4.webp" alt="Room" class="img-tall">
-      <button class="job-btn">Job Openings →</button>
-    </div>
-  </div>
-  </div>
-</div>
 
 
-<!-- =============== FAQ Section -->
+<!-- =============== FAQ Section -->                                    
 
 <section class="faq-section mx-auto mt-5">
   <div class="text-center mb-5">
@@ -758,6 +1005,6 @@
 
 <!-- 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 -->
