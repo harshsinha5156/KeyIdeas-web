@@ -103,7 +103,7 @@
     const row1 = document.getElementById(rowId1);
     const row2 = document.getElementById(rowId2);
 
-    if (row1.children.length > 0 && row2.children.length > 0) {
+    if (row1.children.length > 0 && row2.children.length > 0) {   
       const temp1 = row1.children[0];
       const temp2 = row2.children[0];
 
