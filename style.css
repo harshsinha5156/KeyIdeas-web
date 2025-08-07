@@ -1,476 +1,303 @@
 
         
        
- :root {
-      --primary-color: #4f149a;
-    }
+ /* Root Variables */
+:root {
+  --primary-color: #4f149a;
+  --header-bg: #ebe2fb;
+  --text-color: #000;
+}
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      width: 100%;
-      max-width: 100%;
-      
-    }
-
-    /* ✅ Header Section */
-    
-
-    /* Header Section */
-    .header-section {
-      background-color: #ebe2fb;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-sizing: border-box;
-      padding: 20px;
-    }
-
-    .header-text {
-      font-weight: 700;
-      margin: 0;
-      text-align: center;
-      width: 100%;
-    }
-
-    /* Navbar Styling */
-    .nav-container {
-      border-bottom: 1px solid #000;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    .logo {
-      font-weight: 500;
-      letter-spacing: 3px;
-      color: var(--primary-color);
-      line-height: 1.2;
-    }
-
-    .logo-line {
-      height: 1px;
-      background-color: #000;
-      margin: 8px 0;
-    }
-
-    .tagline {
-      color: #000;
-      letter-spacing: 0.5px;
-    }
-
-    .nav-link-custom {
-      color: var(--primary-color) !important;
-      font-weight: 500;
-      position: relative;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .nav-link-custom::after {
-      content: " ▼";
-      font-size: 12px;
-      position: absolute;
-      right: -10px;
-      bottom: 3px;
-    }
-
-    .btn-lets-talk {
-      background-color: var(--primary-color);
-      color: white !important;
-      font-weight: 500;
-      border-radius: 4px !important;
-    }
-
-    /* Desktop/Laptop (992px and up) */
-    @media (min-width: 992px) {
-      .header-section {
-        height: 280px;
-      }
-      
-      .header-text {
-        font-size: 32px;
-      }
-      
-      .nav-container {
-        padding: 0 60px;
-      }
-      
-      .logo {
-        font-size: 28px;
-      }
-      
-      .logo-line {
-        width: 240px;
-      }
-      
-      .tagline {
-        font-size: 20px;
-      }
-      
-      .nav-link-custom {
-        font-size: 18px;
-        padding: 0 5px !important;
-        margin: 0 15px !important;
-      }
-      
-      .btn-lets-talk {
-        font-size: 18px;
-        padding: 10px 25px !important;
-        margin-left: 15px !important;
-      }
-    }
-
-    /* Tablet (768px to 991px) */
-    @media (min-width: 768px) and (max-width: 991.98px) {
-      .header-section {
-        height: 220px;
-      }
-      
-      .header-text {
-        font-size: 28px;
-      }
-      
-      .nav-container {
-        padding: 0 40px;
-      }
-      
-      .logo {
-        font-size: 24px;
-      }
-      
-      .logo-line {
-        width: 200px;
-      }
-      
-      .tagline {
-        font-size: 18px;
-      }
-      
-      .nav-link-custom {
-        font-size: 16px;
-        padding: 0 5px !important;
-        margin: 0 10px !important;
-      }
-      
-      .btn-lets-talk {
-        font-size: 16px;
-        padding: 8px 20px !important;
-        margin-left: 10px !important;
-      }
-    }
-
-    /* Mobile (up to 767px) */
-    @media (max-width: 767.98px) {
-      .header-section {
-        height: 150px;
-        padding: 15px;
-      }
-      
-      .header-text {
-        font-size: 22px;
-      }
-      
-      .nav-container {
-        padding: 10px 20px;
-      }
-      
-      .logo-area {
-        width: 100%;
-        text-align: center;
-        margin-right: 0 !important;
-        margin-bottom: 10px;
-      }
-      
-      .logo {
-        font-size: 20px;
-      }
-      
-      .logo-line {
-        width: 180px;
-        margin: 5px auto;
-      }
-      
-      .tagline {
-        font-size: 14px;
-      }
-      
-      .navbar-collapse {
-        background-color: #f8f9fa;
-        padding: 15px;
-        margin-top: 10px;
-        border-radius: 5px;
-      }
-      
-      .nav-link-custom {
-        font-size: 16px;
-        margin: 5px 0 !important;
-        padding: 8px 0 !important;
-        display: block;
-        width: 100%;
-        text-align: center;
-      }
-      
-      .nav-link-custom::after {
-        display: none;
-      }
-      
-      .btn-lets-talk {
-        width: 100%;
-        margin: 10px 0 5px 0 !important;
-        padding: 8px 0 !important;
-        font-size: 16px;
-      }
-      
-      .navbar-toggler {
-        position: absolute;
-        right: 20px;
-        top: 20px;
-      }
-    }
-/* ================================================== Driving Success Section */
-
- /* === MAIN SECTION === */
-/* === MAIN SECTION === */
-.main-section {
+/* Base Styles */
+html, body {
+  margin: 0;
+  padding: 0;
   width: 100%;
-  
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  background-color: #6637C5;
-  color: white;
-  position: relative;
-  overflow: hidden;
-  padding: 40px;
-  box-sizing: border-box;
-  align-items: flex-start;
-}
-
-/* === BOX SECTION === */
-.right-section {
-  flex: 1 1 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  padding-top: 20px;
-  gap: 0;
-}
-
-/* ROW STYLING */
-.row {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-end;
-  gap: 0;
-  margin-bottom: 0;
-}
-
-.right-section .row:nth-child(2),
-.right-section .row:nth-child(3) {
-  flex-direction: row;
-  justify-content: flex-end;
-}
-
-/* === BOX === */
-.box {
-  width: 220px;
-  height: 240px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 600;
-  border: 1px solid #ffffff33;
-  border-radius: 10px;
-  flex-direction: column;
-  transition: all 0.3s ease;
-  padding: 10px;
-  margin-top: 0;
-  border-right: none;
-}
-
-/* === CONTENT SECTION === */
-.content-container {
-  flex: 1 1 50%;
-  max-width: 688px;
-  margin-top: 40px;
-  padding-left: 20px;
-}
-
-h1 {
+  max-width: 100%;
   font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 54px;
-  line-height: 120%;
-  margin-top: 20px;
 }
 
-.subtitle {
-  font-size: 22px;
-  font-weight: 400;
-}
-
-/* === INDIVIDUAL BOX COLORS === */
-.transform { background-color: #cfa9ff; color: white; font-size: 22px; }
-.clutch-b2b { background-color: #7646D7; font-size: 22px; }
-.convert { background-color: #4f149A; font-size: 22px; }
-
-.top-shopify {
-  background-color: #6637C5;
+/* Header Section */
+.header-section {
+  background-color: var(--header-bg);
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  padding-top: 15px;
+  box-sizing: border-box;
+  padding: 20px;
 }
-.top-shopify img {
-  width: 70px;
-  height: auto;
-  margin-top: 0;
-}
-.top-shopify h6 {
-  font-size: 18px;
+
+.header-text {
   font-weight: 700;
-  margin: 12px;
-}
-.top-shopify p {
-  font-size: 13px;
-  margin: 1px;
-}
-
-.attract { background-color: #4F149A; color: white; font-size: 22px; }
-.microsoft-cloud { background-color: #cfa9ff; color: #000; }
-.microsoft-cloud img {
-  width: 100px;
-  height: auto;
-  margin-bottom: 10px;
-}
-.growth { background-color: #4f149A; color: white; font-size: 22px; }
-.strategy { background-color: #cfa9ff; font-size: 22px; }
-.clutch-top12 { background-color: #4f149A; }
-
-.clutch-b2b p,
-.clutch-top12 p {
-  font-size: 13px;
-  margin: 2px 0;
-}
-.clutch-b2b h6,
-.clutch-top12 h6 {
-  font-size: 16px;
-  font-weight: 700;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  color: var(--text-color);
 }
 
-/* === MEDIUM SCREENS (TABLET) === */
-@media (max-width: 1200px) {
-  .main-section {
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-    min-height: auto;
+/* Navbar Container */
+.nav-container {
+  border-bottom: 1px solid var(--text-color);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+
+/* Logo Styles */
+.logo {
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: var(--primary-color);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.logo-line {
+  height: 1px;
+  background-color: var(--text-color);
+  margin: 8px 0;
+}
+
+.tagline {
+  color: var(--text-color);
+  letter-spacing: 0.5px;
+  text-transform: lowercase;
+}
+
+/* Navigation Links */
+.nav-link-custom {
+  color: var(--primary-color) !important;
+  font-weight: 500;
+  position: relative;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.nav-link-custom:hover {
+  opacity: 0.8;
+}
+
+.nav-link-custom::after {
+  content: " ▼";
+  font-size: 12px;
+  position: absolute;
+  right: -10px;
+  bottom: 3px;
+}
+
+/* Button Styles */
+.btn-lets-talk {
+  background-color: var(--primary-color);
+  color: white !important;
+  font-weight: 500;
+  border-radius: 4px !important;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 8px 20px;
+}
+
+.btn-lets-talk:hover {
+  background-color: #3a0f6e;
+  transform: translateY(-2px);
+}
+
+/* Mobile Menu Button */
+.navbar-toggler {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Mobile Menu */
+.navbar-collapse {
+  display: none;
+}
+
+.navbar-collapse.show {
+  display: block;
+}
+
+/* Responsive Styles */
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+  .header-section {
+    height: 150px;
+    padding: 15px;
   }
-
-  .right-section {
-    align-items: center;
-    width: 100%;
-    order: 1;
+  
+  .header-text {
+    font-size: 22px;
   }
-
-  .content-container {
-    order: 2;
-    margin-top: 20px;
-    max-width: 100%;
-    text-align: center;
-    padding: 0;
+  
+  .nav-container {
+    padding: 10px 15px;
   }
-
-  h1 {
-    font-size: 42px;
-  }
-
-  .subtitle {
+  
+  .logo {
     font-size: 18px;
   }
-
-  .row {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
+  
+  .logo-line {
+    width: 160px;
+    margin: 5px auto;
   }
-
-  .box {
-    width: 180px;
-    height: 200px;
-    margin: 10px;
-    font-size: 14px;
+  
+  .tagline {
+    font-size: 12px;
+  }
+  
+  .nav-link-custom {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin: 5px 0 !important;
+  }
+  
+  .nav-link-custom::after {
+    display: none;
+  }
+  
+  .btn-lets-talk {
+    width: 100%;
+    margin: 10px 0 !important;
+    padding: 10px 0 !important;
+  }
+  
+  .navbar-toggler {
+    display: block;
+  }
+  
+  .desktop-nav {
+    display: none;
   }
 }
 
-/* === SMALL SCREENS (MOBILE) === */
-@media (max-width: 768px) {
-  .main-section {
-    flex-direction: column-reverse; /* move heading down */
-    padding: 20px;
-    min-height: 100px;
+/* Tablet (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .header-section {
+    height: 220px;
+    padding: 30px;
   }
-
-  .right-section {
-    align-items: center;
-    width: 100%;
-    order: 1;
+  
+  .header-text {
+    font-size: 28px;
   }
-
-  .content-container {
-    order: 2;
-    text-align: center;
-    margin-top: 30px;
-    padding: 0;
+  
+  .nav-container {
+    padding: 0 30px;
   }
-
-  h1 {
-    font-size: 32px;
-    line-height: 1.3;
+  
+  .logo {
+    font-size: 22px;
   }
-
-  .subtitle {
+  
+  .logo-line {
+    width: 200px;
+  }
+  
+  .tagline {
     font-size: 16px;
   }
-
-  .box {
-    width: 100%;
-    height: auto;
-    padding: 20px;
-    margin-bottom: 15px;
+  
+  .nav-link-custom {
+    font-size: 16px;
+    padding: 0 8px !important;
+    margin: 0 10px !important;
   }
-
-  .row {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    gap: 10px;
+  
+  .btn-lets-talk {
+    font-size: 16px;
+    padding: 8px 18px !important;
+    margin-left: 10px !important;
   }
-
-  .top-shopify img,
-  .microsoft-cloud img {
-    width: 80px;
-  }
-
-  .top-shopify h6,
-  .clutch-b2b h6,
-  .clutch-top12 h6 {
-    font-size: 18px;
-  }
-
-  .clutch-b2b p,
-  .clutch-top12 p,
-  .top-shopify p {
-    font-size: 13px;
+  
+  .navbar-toggler {
+    display: none;
   }
 }
 
+/* Desktop (992px and up) */
+@media (min-width: 992px) {
+  .header-section {
+    height: 280px;
+    padding: 40px;
+  }
+  
+  .header-text {
+    font-size: 32px;
+  }
+  
+  .nav-container {
+    padding: 0 60px;
+  }
+  
+  .logo {
+    font-size: 28px;
+  }
+  
+  .logo-line {
+    width: 240px;
+  }
+  
+  .tagline {
+    font-size: 18px;
+  }
+  
+  .nav-link-custom {
+    font-size: 18px;
+    padding: 0 10px !important;
+    margin: 0 15px !important;
+  }
+  
+  .btn-lets-talk {
+    font-size: 18px;
+    padding: 10px 25px !important;
+    margin-left: 15px !important;
+  }
+  
+  .navbar-toggler {
+    display: none;
+  }
+}
+/* ================================================== Driving Success Section */
 
+ .box {
+    width: 220px;
+    height: 240px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    margin-left: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    .box {
+      width: 100% !important;
+      margin-left: 0;
+      border-radius: 10px !important;
+      margin-bottom: 10px;
+    }
+  }
+
+  .floating-clone {
+    position: absolute;
+    z-index: 9999;
+    pointer-events: none;
+    transition: transform 0.6s ease;
+  }
+                                                                                                    
 
     /* ========================================================= Comprehensive IT consulting */
 

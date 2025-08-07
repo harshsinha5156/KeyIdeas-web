@@ -91,7 +91,9 @@
 
     
   
-  function shiftRowLeft(rowId) {
+  
+  
+    function shiftRowLeft(rowId) {
     const row = document.getElementById(rowId);
     const first = row.children[0];
     row.appendChild(first); // move first to end
@@ -114,7 +116,7 @@
   }
 
   setInterval(() => {
-    shiftRowLeft('row1');              // Row 1 shifts left
-    shiftRowLeft('row3');              // Row 3 shifts left
-    swapColumnsBetweenRows('row2', 'row3'); // Swap 1st boxes between row 2 & 3
-  }, 1000);
+    shiftRowLeft('row1');
+    shiftRowLeft('row3');
+    swapColumnsBetweenRows('row2', 'row3');
+  }, 2000);
