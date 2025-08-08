@@ -95,190 +95,106 @@
             transform: translateY(-2px);
         }
 
-        /* Driving Success Section */
-        .box {
-            width: 220px;
-            height: 240px;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            margin-left: -1px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .floating-clone {
-            position: absolute;
-            z-index: 9999;
-            pointer-events: none;
-            transition: transform 0.6s ease;
-        }
-
-        /* Responsive Adjustments */
-        @media (max-width: 1199px) {
-            .box {
-                width: 180px;
-                height: 200px;
-            }
-        }
-
-        @media (max-width: 991px) {
-            .box {
-                width: 150px;
-                height: 170px;
-                font-size: 16px;
-            }
-            
-            .navbar-collapse {
-                gap: 15px !important;
-            }
-        }
-
-        @media (max-width: 767px) {
-            .header-section {
-                height: 80px;
-                padding: 10px;
-            }
-            
-            .header-text {
-                font-size: 18px;
-            }
-            
-            .nav-container {
-                padding: 10px 15px;
-            }
-            
-            .logo {
-                font-size: 16px;
-            }
-            
-            .logo-line {
-                width: 120px;
-                margin: 5px 0;
-            }
-            
-            .tagline {
-                font-size: 10px;
-            }
-            
-            .nav-link-custom {
-                font-size: 14px;
-                padding: 5px 0 !important;
-            }
-            
-            .btn-lets-talk {
-                font-size: 14px;
-                padding: 6px 15px !important;
-            }
-
-            /* Stack boxes on mobile */
-            #row1, #row2, #row3 {
-                flex-direction: column;
-                align-items: center !important;
-            }
-
-            .box {
-                width: 90% !important;
-                max-width: 300px;
-                height: 120px;
-                margin-left: 0 !important;
-                margin-bottom: 10px !important;
-                border-radius: 10px !important;
-            }
-
-            /* Adjust driving success section layout for mobile */
-            .w-full.bg-\[\#6637C5\] {
-                flex-direction: column;
-                min-height: auto;
-            }
-
-            .w-full.md\:w-\[40\%\], .w-full.md\:w-\[60\%\] {
-                width: 100% !important;
-                padding: 20px !important;
-            }
-
-            .w-full.md\:w-\[60\%\] {
-                margin-top: 20px;
-            }
-
-            h1.font-poppins {
-                font-size: 28px !important;
-                margin-bottom: 15px !important;
-            }
-
-            p.text-base {
-                font-size: 16px !important;
-            }
-        }
-
-        @media (min-width: 768px) and (max-width: 991px) {
-            .header-section {
-                height: 120px;
-                padding: 20px;
-            }
-            
-            .header-text {
-                font-size: 24px;
-            }
-            
-            .logo {
-                font-size: 20px;
-            }
-            
-            .logo-line {
-                width: 180px;
-            }
-            
-            .tagline {
-                font-size: 14px;
-            }
-            
-            .nav-link-custom {
-                font-size: 16px;
-            }
-            
-            .btn-lets-talk {
-                font-size: 16px;
-            }
-        }
-
-        @media (min-width: 992px) {
-            .header-section {
-                height: 150px;
-                padding: 30px;
-            }
-            
-            .header-text {
-                font-size: 28px;
-            }
-            
-            .logo {
-                font-size: 24px;
-            }
-            
-            .logo-line {
-                width: 220px;
-            }
-            
-            .tagline {
-                font-size: 16px;
-            }
-            
-            .nav-link-custom {
-                font-size: 18px;
-            }
-            
-            .btn-lets-talk {
-                font-size: 18px;
-            }
-        }
+        /* ================================== Driving Success Section */
+    .box {
+    width: 220px;
+    height: 240px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    margin-left: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+    flex-shrink: 0;
+}
 
 
+.text-xxs {
+    font-size: 0.65rem;
+    line-height: 1rem;
+}
+
+
+@media (max-width: 1024px) {
+    .box {
+        width: 160px;
+        height: 180px;
+    }
+    
+    .w-full.bg-\[\#6637C5\] {
+        min-height: 600px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .box {
+        width: 120px;
+        height: 140px;
+    }
+    
+    .w-full.bg-\[\#6637C5\] {
+        min-height: 550px;
+    }
+    
+  
+    h1.font-poppins {
+        font-size: 2rem !important;
+        line-height: 2.5rem !important;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .box {
+        width: 100px;
+        height: 120px;
+    }
+    
+    
+    .box div {
+        padding: 4px;
+    }
+ 
+    .box img {
+        width: 40px !important;
+        margin-bottom: 0.25rem !important;
+    }
+    
+    .box h3, .box h6 {
+        font-size: 0.75rem !important;
+    }
+    
+    .box p {
+        font-size: 0.6rem !important;
+        line-height: 0.9rem !important;
+    }
+}
+
+/* Horizontal scrolling for smaller screens */
+@media (max-width: 1024px) {
+    #row1, #row2, #row3 {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 15px;
+    }
+    
+    /* Hide scrollbar */
+    #row1::-webkit-scrollbar, 
+    #row2::-webkit-scrollbar,
+    #row3::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .box {
+        scroll-snap-align: start;
+    }
+}
         /* ====================================//////////////////////////================= */
 
         /* Comprehensive IT Consulting Section */
