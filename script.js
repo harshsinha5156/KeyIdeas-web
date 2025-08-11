@@ -138,3 +138,6 @@ document.addEventListener('DOMContentLoaded', handleAnimations);
         // Run on load and resize
         window.addEventListener('load', toggleLayout);
         window.addEventListener('resize', toggleLayout);
+
+
+        //                                                                                                                                                                                                                        
