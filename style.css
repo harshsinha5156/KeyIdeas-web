@@ -929,7 +929,6 @@
 }
 
 /* ======================================================================== */
-
 .process-section {
     padding: 60px 20px;
     text-align: center;
@@ -964,10 +963,9 @@
     min-width: 140px;
 }
 
-/* Gray boxes */
+/* Box styles */
 .desc-box {
     background: #f8f9fa;
-    border-radius: 12px;
     border: 1px solid #e9ecef;
     padding: 18px 14px;
     height: 96px;
@@ -977,6 +975,93 @@
     font-size: 13px;
     line-height: 1.4;
     position: relative;
+}
+
+/* First box - pointed on right side */
+.first-box {
+    border-radius: 12px 0 0 12px;
+    position: relative;
+    margin-right: -1px;
+}
+.first-box::after {
+    content: '';
+    position: absolute;
+    right: -12px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 48px 0 48px 12px;
+     z-index: 2;
+}
+.first-box::before {
+    content: '';
+    position: absolute;
+    right: -13px;
+    top: -1px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 49px 0 49px 13px;
+   
+    z-index: 1;
+}
+
+/* Last box - pointed on left side */
+.last-box {
+    border-radius: 0 12px 12px 0;
+    position: relative;
+    margin-left: -1px;
+}
+.last-box::after {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 48px 12px 48px 0;
+   
+    z-index: 2;
+}
+.last-box::before {
+    content: '';
+    position: absolute;
+    left: -13px;
+    top: -1px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 49px 13px 49px 0;
+  
+    z-index: 1;
+}
+
+/* Arrow boxes - pointed on both sides */
+.arrow-box {
+    position: relative;
+    margin: 0 -1px;
+}
+.arrow-box::before,
+.arrow-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    z-index: 2;
+}
+.arrow-box::before {
+    left: -12px;
+    border-width: 48px 12px 48px 0;
+    border-color: transparent #f8f9fa transparent transparent;
+}
+.arrow-box::after {
+    right: -12px;
+    border-width: 48px 0 48px 12px;
+    border-color: transparent transparent transparent #f8f9fa;
 }
 
 /* Purple badges */
@@ -1004,7 +1089,7 @@
     position: absolute;
     left: 50%;
     width: 2px;
-    background: #e9ecef; /* Changed to gray */
+    background: #e9ecef;
     z-index: 1;
     transform: translateX(-50%);
 }
@@ -1016,7 +1101,7 @@
 .step:nth-child(odd) .badge::before {
     top: 100%;
     height: 40px;
-    background: linear-gradient(to bottom, #e9ecef, #e9ecef 80%, transparent); /* Gray gradient */
+    background: linear-gradient(to bottom, #e9ecef, #e9ecef 80%, transparent);
 }
 
 /* Bottom badges (even) */
@@ -1026,7 +1111,7 @@
 .step:nth-child(even) .badge::before {
     bottom: 100%;
     height: 40px;
-    background: linear-gradient(to top, #e9ecef, #e9ecef 80%, transparent); /* Gray gradient */
+    background: linear-gradient(to top, #e9ecef, #e9ecef 80%, transparent);
 }
 
 /* Horizontal connectors between boxes */
@@ -1039,6 +1124,7 @@
     height: 2px;
     width: 24px;
     background: #dee2e6;
+    z-index: 3;
 }
 
 .badge .dot {
@@ -1072,6 +1158,25 @@
         bottom: auto !important;
         height: 30px !important;
         background: linear-gradient(to bottom, #e9ecef, #e9ecef 80%, transparent) !important;
+    }
+    
+    /* Reset arrow styles for mobile */
+    .desc-box,
+    .first-box,
+    .last-box,
+    .arrow-box {
+        border-radius: 12px !important;
+        margin: 0 !important;
+    }
+    .desc-box::before,
+    .desc-box::after,
+    .first-box::before,
+    .first-box::after,
+    .last-box::before,
+    .last-box::after,
+    .arrow-box::before,
+    .arrow-box::after {
+        display: none !important;
     }
 }
     /* ======================================================================== */
