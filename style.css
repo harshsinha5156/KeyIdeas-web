@@ -11,38 +11,21 @@
             overflow-x: hidden;
         }
 
-        /* Header Section */
-        .header-section {
-            background-color: var(--header-bg);
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-sizing: border-box;
-            padding: 20px;
-        }
-
-        .header-text {
-            font-weight: 700;
-            margin: 0;
-            text-align: center;
-            width: 100%;
-            color: var(--text-color);
-        }
+        
 
         /* Navbar */
         .nav-container {
             border-bottom: 1px solid var(--text-color);
             width: 100%;
             box-sizing: border-box;
-            padding: 10px 20px;
+            padding: 10px 80px;
         }
 
         .logo {
             font-weight: 500;
-            letter-spacing: 3px;
+            letter-spacing: 8px;
             color: var(--primary-color);
-            line-height: 1.2;
+            line-height: 1.5;
             text-transform: uppercase;
         }
 
@@ -71,13 +54,16 @@
             opacity: 0.8;
         }
 
-        .nav-link-custom::after {
-            content: " ▼";
-            font-size: 12px;
-            position: absolute;
-            right: -10px;
-            bottom: 3px;
-        }
+      .nav-link-custom::after {
+    content: "⌄"; /* slim arrow */
+    font-size: 20px;
+    position: absolute;
+    right: -14px;
+    bottom: 2px;
+    gap: 10px;
+}
+
+
 
         .btn-lets-talk {
             background-color: var(--primary-color);
@@ -87,7 +73,7 @@
             border: none;
             cursor: pointer;
             transition: all 0.3s ease;
-            padding: 8px 20px;
+            padding: 8px 35px;
         }
 
         .btn-lets-talk:hover {
@@ -101,7 +87,7 @@
 .box {
     width: 220px;
     height: 220px;
-    border-radius: 10px;
+    /* border-radius: 10px;  <-- इस लाइन को हटा दें */
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
@@ -111,8 +97,27 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
     font-weight: bold;
     flex-shrink: 0;
-    overflow: hidden; /* NEW - prevents content overflow */
-    box-sizing: border-box; /* NEW - includes padding in dimensions */
+    overflow: hidden; 
+    box-sizing: border-box; 
+}
+/* Special box styling */
+.special-box {
+    border-radius: 0 0 0 10px !important;
+}
+
+
+#row1 .first-box {
+    border-radius: 0 0 0 10px;
+}
+
+
+#row2 .first-box {
+    border-radius: 0 0 0 10px;
+}
+
+
+#row3 .first-box {
+    border-radius: 0 0 0 10px;
 }
 
 /* Inner content container - NEW */
@@ -141,28 +146,88 @@
     line-height: 1.2;
 }
 
-/* Tablet adjustments - UNCHANGED */
-@media (max-width: 1024px) {
+@media (min-width: 1025px) {
+    .lg\:w-\[60\%\] > div {
+        padding-right: 0 !important; /* remove pr-4 ka gap */
+        margin-right: 0 !important;
+          /* lines ke beech ka gap badhao (default ~1.2 hota hai) */
+   
+    }
+
+    .lg\:w-\[40\%\] h1 {
+        line-height: 1.3; /* spacing adjust */
+         margin-bottom: 25px; 
+    }
+}
+
+/* iPad Mini & iPad Pro Fix (Portrait & Landscape) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Boxes thoda chhote for iPad */
     .box {
         width: 180px;
         height: 180px;
     }
+
+    /* Box text adjust */
+    .box h3, .box h6 {
+        font-size: 0.9rem;
+    }
+    .box p {
+        font-size: 0.75rem;
+    }
+
+    /* Heading side ka spacing */
+    .lg\:w-\[40\%\] h1 {
+        line-height: 1.3;
+        margin-bottom: 20px;
+    }
+
+    /* Paragraph ka margin top thoda adjust */
+    .lg\:w-\[40\%\] p {
+        margin-top: 10px !important;
+    }
+
+    /* Right side boxes ka gap control */
+    .lg\:w-\[60\%\] > div {
+        padding-right: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+/* iPad Pro specific (portrait + landscape) */
+@media (min-width: 1024px) and (max-width: 1366px) {
+    .lg\:w-\[60\%\] .box {
+        width: 200px;
+        height: 200px;
+    }
 }
 
 
-/* Mobile adjustments - UNCHANGED */
+
+/* Mobile adjustments - UPDATED */
 @media (max-width: 767px) {
     .lg\:w-\[60\%\] { order: -1; }
-    .lg\:w-\[40\%\] { order: 1; }
+    .lg\:w-\[40\%\] { 
+        order: 1;
+        margin-top: 100px; /* heading & paragraph neeche push */
+    }
     .box {
         width: 120px;
         height: 120px;
     }
-    .box h3 { font-size: 0.85rem; }
-    .box h6 { font-size: 0.75rem; }
+    .lg\:w-\[60\%\] > div {
+        padding-right: 0 !important; /* remove pr-4 ka gap */
+        margin-right: 0 !important;
+    }
+    .box h3 { font-size: 0.65rem; }
+    .box h6 { font-size: 0.65rem; }
     .box p { font-size: 0.65rem; }
     .box img { max-width: 30px; }
 }
+.mobile-break {
+        display: block;
+    }
+
 
 /* Extra small devices - UNCHANGED */
 @media (max-width: 480px) {
@@ -170,15 +235,19 @@
         width: 100px;
         height: 100px;
     }
-    .box h3 { font-size: 0.8rem; }
-    .box h6 { font-size: 0.7rem; }
-    .box p { font-size: 0.6rem; }
+    .box h3 { font-size: 0.6rem; }
+    .box h6 { font-size: 0.6rem; }
+    .box p { font-size: 0.3rem; }
     .box img { max-width: 25px; }
+
+    /* Special box styling */
+.special-box {
+    border-radius: 0 0 0 10px !important;
+}
 }
 
 
 /* ====================================//////////////////////////================= */
-
 /* Comprehensive IT Consulting Section */
 .consulting-container {
     width: 100%;
@@ -210,36 +279,32 @@
 .tab-buttons {
     display: flex;
     flex-direction: column;
-    gap: 12px; /* Increased gap between buttons */
-    flex: 0 0 260px; /* Increased width for buttons */
+    gap: 12px;
+    flex: 0 0 260px;
 }
 
 .tab-button {
     background-color: #f2f2f2;
     color: #000;
     font-weight: 600;
-    padding: 16px 20px; /* Increased button padding */
+    padding: 16px 20px;
     border: none;
     border-radius: 8px;
     text-align: left;
     cursor: pointer;
     transition: all 0.3s;
-    font-size: 17px; /* Increased button font size */
+    font-size: 17px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .tab-button::after {
-    content: "↓";
-    font-size: 16px; /* Increased icon size */
-    transition: transform 0.3s;
-    margin-left: 10px; /* Push icon to the right */
-}
-
-.tab-button.active::after {
-    transform: rotate(180deg);
+    content: "";
 }
 
 .tab-button.active {
@@ -271,15 +336,15 @@
 .tab-content-box h2 {
     color: var(--primary-color);
     font-weight: 700;
-    font-size: 28px; /* Increased heading size */
+    font-size: 28px;
     margin-top: 0;
-    margin-bottom: 20px; /* Increased margin */
+    margin-bottom: 20px;
 }
 
 .tab-content-box p {
-    font-size: 17px; /* Increased paragraph size */
-    line-height: 1.6; /* Improved line height */
-    margin-bottom: 25px; /* Increased margin */
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 25px;
 }
 
 .tab-grid {
@@ -313,10 +378,74 @@
     color: var(--primary-color);
 }
 
-/* Desktop/Laptop - Equal Height Boxes */
-@media (min-width: 769px) {
+/* Mobile & iPad styles (<= 1024px) */
+@media (max-width: 1024px) {
+    .consulting-section {
+        flex-direction: column;
+    }
+    
+    .tab-buttons {
+        width: 100%;
+        flex: 1;
+    }
+    
+    .tab-item {
+        margin-bottom: 10px;
+    }
+    
+    .tab-button {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 0;
+    }
+    
+    .tab-button::after {
+        content: "⌄";
+        font-size: 25px;
+        transition: transform 0.3s;
+        margin-left: 10px;
+    }
+    
+    .tab-button.active::after {
+        transform: rotate(180deg);
+    }
+    
+    .tab-content-box {
+        display: none;
+        padding: 15px;
+        background: white;
+        border-radius: 0 0 8px 8px;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+        margin-top: -5px;
+    }
+    
+    .tab-content-box.active {
+        display: block;
+        animation: slideDown 0.3s ease-out;
+    }
+    
+    .tab-button.active {
+        border-radius: 8px 8px 0 0;
+    }
+    
+    /* Hide content wrapper on mobile */
     .tab-content-wrapper {
-        min-height: 380px; /* Further decreased height */
+        display: none;
+    }
+}
+
+/* Desktop styles (> 1024px) */
+@media (min-width: 1025px) {
+    /* Show content wrapper on desktop */
+    .tab-content-wrapper {
+        display: block;
+        min-height: 380px;
+    }
+    
+    /* Hide mobile content boxes */
+    .tab-item .tab-content-box {
+        display: none !important;
     }
     
     .tab-content-box {
@@ -326,42 +455,35 @@
     }
 }
 
+/* Tablet / iPad Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .mobile-heading {
+        display: block !important;
+        text-align: center !important;
+        margin-bottom: 30px !important;
+        font-size: 26px !important;
+        font-weight: 700 !important;
+        width: 100% !important;
+    }
+
+    .section-heading {
+        display: none !important;
+    }
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
     .section-heading {
-        display: none;
+        display: none !important;
     }
     
     .mobile-heading {
-        display: block;
-        font-size: 24px;
-        font-weight: 700;
-        text-align: center;
-        margin-bottom: 25px;
-    }
-    
-    .consulting-section {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .tab-buttons {
-        flex: 0;
-        width: 100%;
-        order: 1;
-    }
-    
-    .tab-content-wrapper {
-        order: 2;
-    }
-    
-    .tab-button {
-        padding: 14px 20px;
-    }
-    
-    .tab-content-box {
-        padding: 20px;
-        margin-top: 5px;
+        display: block !important;
+        font-size: 24px !important;
+        font-weight: 700 !important;
+        text-align: center !important;
+        margin-bottom: 30px !important;
+        width: 100% !important;
     }
     
     #tab1 .tab-grid,
@@ -372,37 +494,34 @@
     #tab6 .tab-grid {
         grid-template-columns: 1fr;
     }
-    
-    .tab-content-box.active {
-        animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+        max-height: 0;
     }
-    
-    @keyframes slideDown {
-        from { 
-            opacity: 0;
-            transform: translateY(-10px);
-            max-height: 0;
-        }
-        to { 
-            opacity: 1;
-            transform: translateY(0);
-            max-height: 1000px;
-        }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        max-height: 1000px;
     }
 }
 
-        /* =================================================== */
 
-     /* Experiences Section */
+        
+/* =================================================== */
+/* Experiences Section */
 .experience-section {
     width: 100%;
-    max-width: 1528px;
-    margin: 80px auto 0;
-    padding: 70px 20px;
+    max-width: 1320px;
+    margin: 30px auto 0;
+    padding: 40px 20px;
     box-sizing: border-box;
 }
 
-.experience-section h2 {
+.experience-section h1 {
     font-size: 40px;
     font-weight: 700;
     text-align: center;
@@ -425,9 +544,13 @@
     margin-bottom: 0;
 }
 
-/* Mobile Layout - Hidden by default */
-.mobile-layout {
-    display: none;
+/* Card Width Classes */
+.wide-card {
+    flex: 1.7;
+}
+
+.narrow-card {
+    flex: 1.3;
 }
 
 /* Common Card Styles */
@@ -435,18 +558,42 @@
     position: relative;
     border-radius: 16px;
     overflow: hidden;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    background-position: center;
-    background-size: cover;
-    transition: transform 0.3s ease;
     height: 450px;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .experience-card:hover {
-    transform: translateY(-5px);
+    transform: scale(1.02); /* Slight scale up on hover */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Optional: Add shadow for depth */
+}
+
+.experience-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease; /* Smooth zoom transition */
+}
+
+/* Hover effect for desktop only */
+@media (min-width: 992px) {
+    .experience-card:hover img {
+        transform: scale(1.1); /* Zoom in effect on hover */
+    }
+}
+
+/* Card Content at Top */
+.top-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px;
+    color: white;
 }
 
 .experience-card::before {
@@ -456,61 +603,50 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%);
     z-index: 1;
+    transition: opacity 0.3s ease; /* Smooth transition for overlay */
 }
 
-.experience-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+.experience-card:hover::before {
+    opacity: 0.9; /* Darken overlay slightly on hover */
 }
 
-.card-content {
-    position: relative;
-    z-index: 2;
-    padding: 30px;
+.top-content h2,
+.top-content h3 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease; /* Smooth transition for text */
 }
 
-/* Special styling for no-content card */
-.experience-card.no-content::before {
-    display: none; /* removes gradient overlay */
+.experience-card:hover .top-content h2,
+.experience-card:hover .top-content h3 {
+    transform: translateY(-5px); /* Slight lift effect on hover */
 }
 
-.experience-card.no-content {
-    justify-content: center;
-    height: 450px; /* desktop height */
+.top-content h2 {
+    font-size: 24px;
 }
 
-.experience-card.no-content img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+.top-content h3 {
+    font-size: 20px;
 }
 
-/* Mobile Scroll Container */
-.mobile-scroll-container {
-    display: flex;
-    overflow-x: auto;
-    gap: 15px;
-    padding-bottom: 15px;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+.top-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
 }
 
-.mobile-scroll-container .experience-card {
-    min-width: 85%;
-    scroll-snap-align: start;
-    height: 350px;
+.experience-card:hover .top-content p {
+    opacity: 1; /* Make text slightly more visible on hover */
 }
 
-/* Mobile no-content card taller */
-.mobile-scroll-container .experience-card.no-content {
-    height: 400px; /* taller image for mobile */
-}
-
-/* Responsive Adjustments */
+/* Rest of your existing CSS remains the same */
+/* Mobile Layout */
 @media (max-width: 991px) {
     .desktop-layout {
         display: none;
@@ -521,26 +657,63 @@
     }
     
     .experience-section {
-        padding: 50px 15px;
+        padding: 30px 15px;
     }
     
-    .experience-section h2 {
+    .experience-section h1 {
         font-size: 32px;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+    
+    .top-content {
+        padding: 20px;
+    }
+    
+    .top-content h2 {
+        font-size: 20px;
+    }
+    
+    .top-content h3 {
+        font-size: 18px;
+    }
+    
+    .top-content p {
+        font-size: 14px;
     }
 }
 
+/* Mobile Scroll Container - Updated with hidden scrollbar */
+.mobile-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 0;
+}
+
+.mobile-scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.mobile-scroll-container .experience-card {
+    min-width: 85%;
+    scroll-snap-align: start;
+    height: 350px;
+}
+
+/* Small Mobile Adjustments */
 @media (max-width: 767px) {
     .mobile-scroll-container .experience-card {
         height: 300px;
     }
-
-    .mobile-scroll-container .experience-card.no-content {
-        height: 380px; /* adjusted for smaller tablets/mobiles */
-    }
     
-    .experience-section h2 {
+    .experience-section h1 {
         font-size: 28px;
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
 }
 
@@ -549,21 +722,24 @@
         height: 280px;
         min-width: 90%;
     }
-
-    .mobile-scroll-container .experience-card.no-content {
-        height: 360px; /* slightly smaller for very small screens */
-    }
     
-    .experience-section h2 {
+    .experience-section h1 {
         font-size: 24px;
     }
+    
+    .top-content {
+        padding: 15px;
+    }
+    
+    .top-content h2 {
+        font-size: 18px;
+    }
+    
+    .top-content h3 {
+        font-size: 16px;
+    }
 }
-
-
-
-
-
-        /* /========================///////////////////////======================= */
+/* /========================///////////////////////======================= */
 
         
 
@@ -937,13 +1113,13 @@
 .process-heading {
     font-size: 35px;
     font-weight: 800;
-    margin: 0 auto 12px;
+    margin: 0 auto 20px; /* 12px se badha kar 20px */
     max-width: 1100px;
 }
 
 .section-description {
     max-width: 760px;
-    margin: 0 auto 36px;
+    margin: 20px auto 36px; /* upar 20px ka gap add kiya */
     color: var(--muted);
     line-height: 1.45;
 }
@@ -1159,6 +1335,13 @@
         height: 30px !important;
         background: linear-gradient(to bottom, #e9ecef, #e9ecef 80%, transparent) !important;
     }
+     .process-heading {
+        margin-bottom: 16px; /* space maintain */
+        font-size: 24px; /* size chhota kiya mobile ke liye */
+    }
+    .section-description {
+        margin-top: 16px;
+    }
     
     /* Reset arrow styles for mobile */
     .desc-box,
@@ -1181,157 +1364,33 @@
 }
     /* ======================================================================== */
 
- .social-impact-section {
+.social-impact-section {
   background: linear-gradient(to bottom, #ebe2fb 50%, #f2f2f2 50%);
   padding: 4rem 0;
   text-align: center;
   width: 100%;
 }
 
-/* Desktop Layout - Horizontal Overlapping */
-.desktop-overlap {
-  display: flex;
-  justify-content: center;
-  margin: 2rem auto;
-  max-width: 1200px;
-}
-
-.desktop-overlap img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 4px solid white;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  object-fit: cover;
-  margin-left: -20px; /* Overlap amount */
-  transition: transform 0.3s ease;
-  position: relative;
-}
-
-.desktop-overlap img:first-child {
-  margin-left: 0;
-}
-
-.desktop-overlap img:hover {
-  transform: scale(1.1);
-  z-index: 10;
-}
-
-/* Mobile Layout - Grid with Overlapping */
-.mobile-overlap-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
-  max-width: 400px;
-  margin: 2rem auto;
-  position: relative;
-}
-
-.mobile-overlap-grid img {
-  width: 100%;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  border: 3px solid white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  object-fit: cover;
-  margin: 0 -15px; /* Overlap amount */
-  z-index: 1;
-  position: relative;
-}
-
-/* Content Styling */
-.social-content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.social-content p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #333;
-  margin-bottom: 1.5rem;
-}
-
-.social-link {
-  display: inline-block;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #6d28d9;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.social-link:hover {
-  color: #5b21b6;
-  text-decoration: underline;
-}
-
-/* Responsive Adjustments */
-@media (min-width: 640px) {
+@media (max-width: 640px) {
   .social-impact-section {
-    padding: 5rem 0;
+    padding: 3rem 0;
   }
   
-  .mobile-overlap-grid img {
-    border-width: 4px;
-    margin: 0 -20px;
+  /* Increase image size on mobile */
+  .sm\:hidden .grid img {
+    width: 5.5rem;
+    height: 5.5rem;
   }
   
-  .social-content p {
-    font-size: 1.2rem;
+  /* Adjust spacing between rows */
+  .sm\:hidden .grid {
+    gap: 0.5rem 0.1rem; /* vertical gap | horizontal gap */
   }
 }
 
 @media (min-width: 768px) {
   .social-impact-section {
     padding: 6rem 0;
-  }
-  
-  .desktop-overlap {
-    display: flex;
-  }
-  
-  .mobile-overlap-grid {
-    display: none;
-  }
-  
-  .desktop-overlap img {
-    width: 140px;
-    height: 140px;
-  }
-  
-  .social-content p {
-    font-size: 1.25rem;
-  }
-  
-  .social-link {
-    font-size: 1.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .social-impact-section {
-    padding: 7rem 0;
-  }
-  
-  .desktop-overlap img {
-    width: 160px;
-    height: 160px;
-    margin-left: -30px;
-  }
-  
-  .social-content p {
-    font-size: 1.3rem;
-    line-height: 1.7;
-  }
-}
-
-@media (min-width: 1280px) {
-  .desktop-overlap img {
-    width: 180px;
-    height: 180px;
-    margin-left: -40px;
   }
 }
 
@@ -1359,8 +1418,8 @@
     display: none;
     font-size: 24px;
     font-weight: 700;
-    text-align: center;
-    margin-bottom: 20px;
+    text-align: left; /* Changed to left align */
+    margin-bottom: 15px;
     padding: 0 15px;
 }
 
@@ -1454,6 +1513,13 @@
     
     .mobile-join-title {
         display: block;
+        text-align: left;
+        padding: 0 15px;
+    }
+    
+    .join-para {
+        text-align: left;
+        padding: 0 15px;
     }
     
     .desktop-layout {
@@ -1464,34 +1530,32 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        gap: 20px; /* Increased gap for tablet */
+        gap: 20px;
     }
     
-    /* Main image - full width with top gap */
     .mobile-main-img {
         width: 100%;
         height: auto;
         aspect-ratio: 16/9;
         border-radius: 12px;
         object-fit: cover;
-        margin-top: 10px; /* Added top gap */
     }
     
-    /* Three small images - combined width matches main image */
     .mobile-image-row {
         display: flex;
-        gap: 8px; /* Slightly larger gap for tablet */
+        gap: 15px; /* Increased gap between small images */
         width: 100%;
+        padding: 0 15px;
+        margin-top: 15px;
     }
     
     .mobile-small-img {
-        width: calc(33.33% - 5.33px); /* 3 images with gap */
+        width: calc(33.33% - 10px); /* Adjusted for larger gap */
         aspect-ratio: 1/1;
         border-radius: 10px;
         object-fit: cover;
     }
     
-    /* Button */
     .mobile-btn-container {
         display: flex;
         justify-content: center;
@@ -1499,7 +1563,7 @@
     }
     
     .job-btn {
-        max-width: 220px; /* Slightly larger for tablet */
+        max-width: 220px;
         padding: 12px 24px;
         font-size: 15px;
     }
@@ -1517,6 +1581,15 @@
     
     .mobile-join-title {
         display: block;
+        text-align: left; /* Left aligned */
+        padding: 0;
+        margin-bottom: 12px;
+    }
+    
+    .join-para {
+        text-align: left; /* Left aligned */
+        padding: 0;
+        margin-top: 30px;
     }
     
     .desktop-layout {
@@ -1527,33 +1600,33 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        gap: 15px;
+        gap: 20px;
     }
     
-    /* Main image - full width */
     .mobile-main-img {
         width: 100%;
         height: auto;
         aspect-ratio: 16/9;
         border-radius: 12px;
         object-fit: cover;
+        
     }
     
-    /* Three small images - combined width matches main image */
     .mobile-image-row {
         display: flex;
-        gap: 6px;
+        gap: 10px; /* Increased gap between small images */
         width: 100%;
+        padding: 0 5px;
+        margin-top: 15px;
     }
     
     .mobile-small-img {
-        width: calc(33.33% - 4px); /* 3 images with gap */
+        width: calc(33.33% - 7px); /* Adjusted for larger gap */
         aspect-ratio: 1/1;
         border-radius: 10px;
         object-fit: cover;
     }
     
-    /* Button */
     .mobile-btn-container {
         display: flex;
         justify-content: center;
