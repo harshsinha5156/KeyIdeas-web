@@ -258,4 +258,34 @@ document.addEventListener('DOMContentLoaded', handleAnimations);
         });
     });
 });
+
+
+// ==================== Join section ============================
+// This ensures the section loads properly without flickering
+document.addEventListener('DOMContentLoaded', function() {
+    const joinSection = document.querySelector('.join-section');
+    if(joinSection) {
+        // Force reflow to prevent rendering issues
+        void joinSection.offsetHeight;
+        
+        // Add loaded class with slight delay
+        setTimeout(() => {
+            joinSection.style.opacity = '1';
+        }, 50);
+    }
+    
+    // Preload images to prevent layout shift
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        if(img.complete) {
+            img.style.opacity = '1';
+        } else {
+            img.addEventListener('load', function() {
+                this.style.opacity = '1';
+            });
+            img.style.opacity = '0';
+            img.style.transition = 'opacity 0.3s ease';
+        }
+    });
+});
                                                                                                                                                                                                                         // 
