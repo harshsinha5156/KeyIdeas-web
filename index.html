@@ -17,27 +17,34 @@
 
     <!-- Navbar - visible on tablet & desktop -->
     <nav class="nav-container navbar navbar-expand-lg mb-0 d-none d-md-flex">
-        <div class="container-fluid p-0 d-flex flex-wrap justify-content-between align-items-center">
+    <div class="container-fluid p-0 d-flex flex-wrap justify-content-between align-items-center">
+
+        <!-- Logo as Image -->
+        <div class="d-flex flex-column me-3">
+            <img src="./images/companylogo.webp" alt="Logo" class="logo-img">
             
-           
-            <div class="d-flex flex-column me-3">
-                <span class="logo">K E Y I D E A S</span>
-                <div class="logo-line"></div>
-                <span class="tagline">agility-ingenuity-reliability</span>
-            </div>
-
-            
-
-            <div class="navbar-collapse d-flex align-items-center justify-content-end flex-wrap" style="gap: 6rem;">
-    <a href="#" class="nav-link nav-link-custom">Company</a>
-    <a href="#" class="nav-link nav-link-custom">Work</a>
-    <a href="#" class="nav-link nav-link-custom">Resources</a>
-    <a href="#" class="nav-link nav-link-custom">We're Hiring</a>
-    <button class="btn btn-lets-talk">Let's Talk</button>
-</div>
-
         </div>
-    </nav>
+
+        <!-- Navbar Links -->
+        <div class="navbar-collapse d-flex align-items-center justify-content-end flex-wrap" style="gap: 6rem;">
+            <a href="#" class="nav-link nav-link-custom">
+                Company <img src="./images/arrow.webp" class="arrow-icon" alt="">
+            </a>
+            <a href="#" class="nav-link nav-link-custom">
+                Work <img src="./images/arrow.webp" class="arrow-icon" alt="">
+            </a>
+            <a href="#" class="nav-link nav-link-custom">
+                Resources <img src="./images/arrow.webp" class="arrow-icon" alt="">
+            </a>
+            <a href="#" class="nav-link nav-link-custom">
+                We're Hiring 
+            </a>
+            <button class="btn btn-lets-talk">Let's Talk</button>
+        </div>
+
+    </div>
+</nav>
+
 
     <!-- ===========================================.  Driving success section -->
    <section class="w-full bg-[#6637C5] text-white px-0 py-0 flex flex-col lg:flex-row" style="min-height: 690px;">
@@ -795,13 +802,13 @@
 
 <section class="social-impact-section">
   <div class="container mx-auto px-4 sm:px-6 text-center">
-    <!-- Heading (unchanged) -->
+    <!-- Heading -->
     <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold pb-5 mx-auto max-w-4xl leading-tight">
       Social Impact: Making a Difference Through<br class="hidden sm:block"/>
       Corporate Responsibility
     </h2>
 
-    <!-- Desktop Images (unchanged) -->
+    <!-- Desktop Images -->
     <div class="hidden sm:flex justify-center items-center w-full max-w-6xl mx-auto my-8 lg:my-12">
       <div class="flex">
         <img src="./images/round1.webp" alt="Social impact 1" class="rounded-full border-4 border-white shadow-md hover:scale-110 transition-transform duration-300 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 xl:w-40 xl:h-40 -ml-4 sm:-ml-6 md:-ml-8 lg:-ml-10 xl:-ml-12 hover:z-10 relative"/>
@@ -813,32 +820,32 @@
       </div>
     </div>
 
-    <!-- Mobile Layout (adjusted) -->
-    <div class="sm:hidden">
-      <!-- Paragraph moved above images -->
-      <div class="mx-auto px-4 max-w-3xl mt-0 mb-6">
-        <p class="text-base text-gray-700 leading-relaxed">
-          In the current business environment, social impact initiatives at KeyIdeas have become essential elements of our corporate strategy. These efforts extend beyond profit-making goals, striving to foster positive change and enhance societal well-being.
-        </p>
-      </div>
+   <!-- Mobile Layout -->
+<div class="sm:hidden">
+  <!-- Paragraph -->
+  <div class="mx-auto px-4 max-w-3xl mt-0 mb-6">
+    <p class="text-base text-gray-700 leading-relaxed">
+      In the current business environment, social impact initiatives at KeyIdeas have become essential elements of our corporate strategy. These efforts extend beyond profit-making goals, striving to foster positive change and enhance societal well-being.
+    </p>
+  </div>
 
-      <!-- Images (3x2 grid with vertical gap, tight horizontal) -->
-      <div class="grid grid-cols-3 gap-y-4 gap-x-0 justify-items-center mx-auto max-w-xs mb-6">
-        <img src="./images/round1.webp" alt="Social impact 1" class="rounded-full border-3 border-white shadow-md w-20 h-20"/>
-        <img src="./images/round2.webp" alt="Social impact 2" class="rounded-full border-3 border-white shadow-md w-20 h-20"/>
-        <img src="./images/round3.webp" alt="Social impact 3" class="rounded-full border-3 border-white shadow-md w-20 h-20"/>
-        <img src="./images/round4.webp" alt="Social impact 4" class="rounded-full border-3 border-white shadow-md w-20 h-20"/>
-        <img src="./images/round5.webp" alt="Social impact 5" class="rounded-full border-3 border-white shadow-md w-20 h-20"/>
-        <img src="./images/round6.webp" alt="Social impact 6" class="rounded-full border-3 border-white shadow-md w-20 h-20"/>
-      </div>
+  <!-- Images (3x2 grid, center aligned, very small horizontal gap) -->
+  <div class="grid grid-cols-3 gap-y-4 gap-x-[0] justify-items-center mb-6">
+    <img src="./images/round1.webp" alt="Social impact 1" class="rounded-full border-3 border-white shadow-md w-20 h-20"/>
+    <img src="./images/round2.webp" alt="Social impact 2" class="rounded-full border-3 border-white shadow-md w-20 h-20"/>
+    <img src="./images/round3.webp" alt="Social impact 3" class="rounded-full border-3 border-white shadow-md w-20 h-20"/>
+    <img src="./images/round4.webp" alt="Social impact 4" class="rounded-full border-3 border-white shadow-md w-20 h-20"/>
+    <img src="./images/round5.webp" alt="Social impact 5" class="rounded-full border-3 border-white shadow-md w-20 h-20"/>
+    <img src="./images/round6.webp" alt="Social impact 6" class="rounded-full border-3 border-white shadow-md w-20 h-20"/>
+  </div>
 
-      <!-- Link at the bottom -->
-      <a href="#" class="inline-block text-lg font-bold text-purple-800 hover:text-purple-700 hover:underline transition-colors duration-300">
-        Social Responsibility →
-      </a>
-    </div>
+  <!-- Link -->
+  <a href="#" class="inline-block text-lg font-bold text-purple-800 hover:text-purple-700 hover:underline transition-colors duration-300">
+    Social Responsibility →
+  </a>
+</div>
 
-    <!-- Desktop Paragraph & Link (unchanged) -->
+    <!-- Desktop Paragraph & Link -->
     <div class="hidden sm:block mx-auto px-4 sm:px-6 max-w-3xl lg:max-w-4xl mt-8 md:mt-12">
       <p class="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed md:leading-loose mb-6">
         In the current business environment, social impact initiatives at KeyIdeas have become essential elements of our corporate strategy. These efforts extend beyond profit-making goals, striving to foster positive change and enhance societal well-being.
@@ -849,6 +856,7 @@
     </div>
   </div>
 </section>
+
 
 
 
@@ -951,7 +959,7 @@
     <!-- Footer section -->
     <footer class="footer-section">
         <div class="footer-box">
-            <span class="discuss-text">Footer Shortcode</span>
+            <span class="discuss-text">Footer </span>
         </div>
     </footer>
 
