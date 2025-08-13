@@ -15,14 +15,12 @@
 <body>
     
 
-    <!-- Navbar - visible on tablet & desktop -->
-    <nav class="nav-container navbar navbar-expand-lg mb-0 d-none d-md-flex">
+  <!-- Desktop Navbar (shown only on 1200px and above) -->
+<nav class="nav-container navbar navbar-expand-lg mb-0 d-none d-xl-flex">
     <div class="container-fluid p-0 d-flex flex-wrap justify-content-between align-items-center">
-
-        <!-- Logo as Image -->
+        <!-- Logo -->
         <div class="d-flex flex-column me-3">
             <img src="./images/companylogo.webp" alt="Logo" class="logo-img">
-            
         </div>
 
         <!-- Navbar Links -->
@@ -36,14 +34,32 @@
             <a href="#" class="nav-link nav-link-custom">
                 Resources <img src="./images/arrow.webp" class="arrow-icon" alt="">
             </a>
-            <a href="#" class="nav-link nav-link-custom">
-                We're Hiring 
-            </a>
+            <a href="#" class="nav-link nav-link-custom">We're Hiring</a>
             <button class="btn btn-lets-talk">Let's Talk</button>
         </div>
-
     </div>
 </nav>
+
+<!-- Mobile Navbar (shown on all screens below 1200px) -->
+<nav class="mobile-nav d-flex d-xl-none">
+    <div class="mobile-nav-row">
+        <img src="./images/companylogo.webp" alt="Logo" class="mobile-logo">
+        <button class="menu-btn" id="menuOpen">☰</button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" id="menuClose">✖</button>
+        <a href="#">Company</a>
+        <a href="#">Work</a>
+        <a href="#">Resources</a>
+        <a href="#">We're Hiring</a>
+        <button class="btn btn-lets-talk">Let's Talk</button>
+    </div>
+</nav>
+
+
+
 
 
     <!-- ===========================================.  Driving success section -->
@@ -317,6 +333,7 @@
                 <img src="./images/experience9.webp" alt="Healthcare Research Solution">
                 <div class="card-content top-content">
                     <h2>HEALTHCARE RESEARCH  <br>SOLUTION</h2>
+                     <p>User-friendly health based applications for clinical trial management, streamlining data access and collaboration.</p>
                    
                 </div>
             </div>
@@ -325,6 +342,7 @@
                 <img src="./images/experience10.webp" alt="Travel & Hospitality">
                 <div class="card-content top-content">
                     <h3>TRAVEL & HOSPITALITY</h3>
+                     <p>Explore innovative solutions featuring custom designs, certified quality, and enhanced shopping experience across the industry.</p>
                     
                 </div>
             </div>
@@ -333,6 +351,7 @@
                 <img src="./images/experience11.webp" alt="Advanced Jewelry Solutions">
                 <div class="card-content top-content">
                     <h2>ADVANCED JEWELRY SOLUTIONS</h2>
+                    <p>Platforms that simplifies tour planning, makes bookings easier and enhances trip experiences.</p>
                    
                 </div>
             </div>
@@ -341,7 +360,7 @@
                 <img src="./images/experience8.webp" alt="Enterprise Software">
                 <div class="card-content top-content">
                     <h2>ENTERPRISE SOFTWARE</h2>
-                   <button></button>
+                   <p>Powerful tools designed to integrate processes boost productivity, and scale your business seamlessly.</p>
                 </div>
             </div>
         </div>
@@ -366,6 +385,7 @@
                     <h2>REAL ESTATE & PROPERTY MANAGEMENT</h2>
                     <p>Efficient solutions for property listings, talent management, and smooth projects operations.  </p>
                 </div>
+                
             </div>
    <div class="experience-card wide-card">
                 <img src="./images/success9.webp" alt="Healthcare Research Solution">
@@ -461,7 +481,7 @@
 
         <!-- Since 2007 Footer -->
         <div class="w-full text-center sm:text-left mt-6">
-            <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[180px] text-white opacity-25 font-extrabold whitespace-nowrap">
+            <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[180px] text-white  font-extrabold whitespace-nowrap">
                 SINCE 2007
             </h1>
         </div>
@@ -949,19 +969,115 @@
         </div>
     </section>
 
-    <!-- Discuss your ideas section -->
-    <section class="discuss-ideas-section">
-        <div class="discuss-box">
-            <span class="discuss-text">Discuss Your Ideas Shortcode</span>
-        </div>
-    </section>
+  
+   
 
     <!-- Footer section -->
-    <footer class="footer-section">
-        <div class="footer-box">
-            <span class="discuss-text">Footer </span>
+   <!-- Add this just before your closing -->
+<footer class="custom-footer">
+    <div class="custom-footer-container">
+        <div class="custom-footer-left">
+            <div class="custom-services-section">
+                <h3 class="custom-services-heading">SERVICES</h3>
+                <div class="custom-services-row">
+                    <div class="custom-service-box">Web Design</div>
+                    <div class="custom-service-box">UI Design</div>
+                    <div class="custom-service-box">App Development</div>
+                </div>
+                
+                <div class="custom-services-row">
+                    <div class="custom-service-box">Graphic Design</div>
+                    <div class="custom-service-box">E-Commerce Websites</div>
+                    <div class="custom-service-box">Digital Marketing</div>
+                </div>
+            </div>
+            
+            <div class="custom-footer-sections-container">
+                <!-- Row 1 -->
+                <div class="custom-footer-sections-row">
+                    <div class="custom-footer-section">
+                        <h3>CASE STUDIES</h3>
+                        <ul class="custom-footer-list">
+                            <li><a href="#">WE'RE HIRING</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="custom-footer-section">
+                        <h3>INDUSTRIES</h3>
+                        <ul class="custom-footer-list">
+                            <li><a href="#">SOCIAL IMPACT</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Row 2 -->
+                <div class="custom-footer-sections-row">
+                    <div class="custom-footer-section">
+                        <h3>ABOUT</h3>
+                        <ul class="custom-footer-list">
+                            <li><a href="#">BLOG</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="custom-footer-section">
+                        <h3>CONTACT</h3>
+                        <ul class="custom-footer-list">
+                            <li><a href="#">GET A QUOTE</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="custom-contact-text">WANT TO LEARN MORE? GET IN TOUCH!</div>
         </div>
-    </footer>
+        
+        <div class="custom-footer-right">
+            <div class="custom-company-info">
+                <h3>KEYIDEAS</h3>
+                <p class="custom-company-desc">Keyideas is a premier web design, mobile apps, and web development company. Rated 5 out of 5 on Google, Clutch, and Goodfirms.</p>
+                
+                <div class="custom-locations">
+                    <div class="custom-location">
+                        <h4>INDIA</h4>
+                        <p>3rd Floor Platina Tower</p>
+                        <p>MG Road, Sector 28</p>
+                        <p>Gungrom 122002</p>
+                        <br>
+                        <p>18th Floor R-Tech Park</p>
+                        <p>Westem Express Highway</p>
+                        <p>Goregaon Mumbai 400083</p>
+                    </div>
+                    
+                    <div class="custom-location">
+                        <h4>UNITED STATES</h4>
+                        <p>244 $ Palmetto</p>
+                        <p>Daytona Beach</p>
+                        <p>Florida 3214</p>
+                        <p>+91 999-940-375</p>
+                    </div>
+                </div>
+                
+               
+            </div>
+        </div>
+    </div>
+    
+   <div class="custom-footer-bottom">
+    <div class="custom-footer-bottom-content">
+        <div class="custom-social-icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="custom-copyright">
+            &copy; Copyright 2025 Keyideas. All rights reserved.
+        </div>
+    </div>
+</div>
+</footer>
+
 
 
 
