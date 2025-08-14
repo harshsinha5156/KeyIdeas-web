@@ -1468,7 +1468,6 @@
     background: rgba(255, 255, 255, 0.95);
 }
 
-/* Mobile view */
 @media (max-width: 900px) {
     .process-row {
         flex-direction: column;
@@ -1483,9 +1482,14 @@
     .step .desc-box::after {
         display: none;
     }
-    .step .badge {
+   .step .badge {
         top: -50px !important;
         bottom: auto !important;
+        width: 90%;
+        height: 45px; /* Fixed height added */
+        justify-content: center;
+        align-items: center; /* Ensure content is vertically centered */
+        padding: 0 12px; /* Adjust padding as needed */
     }
     .badge::before {
         top: 100% !important;
@@ -1493,9 +1497,9 @@
         height: 30px !important;
         background: linear-gradient(to bottom, #e9ecef, #e9ecef 80%, transparent) !important;
     }
-     .process-heading {
-        margin-bottom: 16px; /* space maintain */
-        font-size: 24px; /* size chhota kiya mobile ke liye */
+    .process-heading {
+        margin-bottom: 16px;
+        font-size: 24px;
     }
     .section-description {
         margin-top: 16px;
@@ -1510,10 +1514,9 @@
         margin: 0 !important;
     }
     .last-box {
-    border-radius: 12px 0 0 12px; /* Changed from 0 12px 12px 0 */
-    position: relative;
-    margin-left: -1px;
-}
+        border-radius: 12px !important; /* Changed to match others */
+        margin-left: 0 !important; /* Removed negative margin */
+    }
     .desc-box::before,
     .desc-box::after,
     .first-box::before,
@@ -1525,7 +1528,6 @@
         display: none !important;
     }
 }
-
 
     /* ======================================================================== */
 
