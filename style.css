@@ -1263,13 +1263,13 @@
 .process-heading {
     font-size: 35px;
     font-weight: 800;
-    margin: 0 auto 20px; /* 12px se badha kar 20px */
+    margin: 0 auto 20px;
     max-width: 1100px;
 }
 
 .section-description {
     max-width: 760px;
-    margin: 20px auto 36px; /* upar 20px ka gap add kiya */
+    margin: 20px auto 36px;
     color: var(--muted);
     line-height: 1.45;
 }
@@ -1279,7 +1279,7 @@
     justify-content: center;
     align-items: center;
     gap: 8px;
-    padding: 100px 12px;
+    padding: 120px 12px; /* Increased padding to accommodate larger badge spacing */
     position: relative;
 }
 
@@ -1289,7 +1289,7 @@
     min-width: 140px;
 }
 
-/* Box styles */
+/* White box styles (unchanged) */
 .desc-box {
     background: #f8f9fa;
     border: 1px solid #e9ecef;
@@ -1303,7 +1303,6 @@
     position: relative;
 }
 
-/* First box - pointed on right side */
 .first-box {
     border-radius: 12px 0 0 12px;
     position: relative;
@@ -1334,38 +1333,36 @@
     z-index: 1;
 }
 
-/* Last box - pointed on left side */
 .last-box {
-    border-radius: 12px 0 0 12px;
+    border-radius: 0 12px 12px 0;
     position: relative;
     margin-left: -1px;
 }
 .last-box::after {
     content: '';
     position: absolute;
-    left: -12px; /* Changed from right */
+    left: -12px;
     top: 0;
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 48px 12px 48px 0; /* Flipped the values */
+    border-width: 48px 12px 48px 0;
     border-color: transparent #f8f9fa transparent transparent;
     z-index: 2;
 }
 .last-box::before {
     content: '';
     position: absolute;
-    left: -13px; /* Changed from right */
+    left: -13px;
     top: -1px;
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 49px 13px 49px 0; /* Flipped the values */
+    border-width: 49px 13px 49px 0;
     border-color: transparent #e9ecef transparent transparent;
     z-index: 1;
 }
 
-/* Middle boxes - pointed on both sides */
 .arrow-box {
     position: relative;
     margin-left: -1px;
@@ -1395,10 +1392,8 @@
     border-color: transparent transparent transparent #f8f9fa;
     z-index: 2;
 }
-.arrow-box::before {
-    z-index: 2;
-}
-/* Purple badges */
+
+/* Blue badges with increased spacing */
 .badge {
     background: #4f149a;
     color: #fff;
@@ -1415,11 +1410,22 @@
     transform: translateX(-50%);
     z-index: 2;
     box-shadow: 0 6px 14px rgba(79,20,154,0.12);
+    height: 45px;
+    box-sizing: border-box;
 }
 
-/* Gray vertical connecting lines */
-.badge::before {
-    content: "";
+/* Top badges moved higher */
+.step.top .badge {
+    top: -80px; /* Increased from -60px */
+}
+
+/* Bottom badges moved lower */
+.step.bottom .badge {
+    bottom: -80px; /* Increased from -60px */
+}
+
+/* Vertical connectors - adjusted for new spacing */
+.connector-vert {
     position: absolute;
     left: 50%;
     width: 2px;
@@ -1428,24 +1434,23 @@
     transform: translateX(-50%);
 }
 
-/* Top badges (odd) */
-.step:nth-child(odd) .badge {
-    top: -60px;
-}
-.step:nth-child(odd) .badge::before {
-    top: 100%;
-    height: 40px;
-    background: linear-gradient(to bottom, #e9ecef, #e9ecef 80%, transparent);
+/* Top connectors */
+.step.top .connector-vert {
+    top: -35px;
+    height: 35px; /* Connects badge to box */
 }
 
-/* Bottom badges (even) */
-.step:nth-child(even) .badge {
-    bottom: -60px;
+/* Bottom connectors */
+.step.bottom .connector-vert {
+    bottom: -35px;
+    height: 35px; /* Connects box to badge */
 }
-.step:nth-child(even) .badge::before {
-    bottom: 100%;
-    height: 40px;
-    background: linear-gradient(to top, #e9ecef, #e9ecef 80%, transparent);
+
+.badge .dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
 }
 
 /* Horizontal connectors between boxes */
@@ -1461,19 +1466,13 @@
     z-index: 3;
 }
 
-.badge .dot {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.95);
-}
-
+/* Mobile view with adjusted spacing */
 @media (max-width: 900px) {
     .process-row {
         flex-direction: column;
         align-items: center;
-        gap: 100px;
-        padding: 60px 12px;
+        gap: 120px; /* Increased gap */
+        padding: 80px 12px; /* Increased padding */
     }
     .step {
         width: 100%;
@@ -1482,20 +1481,13 @@
     .step .desc-box::after {
         display: none;
     }
-   .step .badge {
-        top: -50px !important;
+    .step .badge {
+        top: -70px !important; /* Increased from -50px */
         bottom: auto !important;
-        width: 90%;
-        height: 45px; /* Fixed height added */
-        justify-content: center;
-        align-items: center; /* Ensure content is vertically centered */
-        padding: 0 12px; /* Adjust padding as needed */
     }
-    .badge::before {
-        top: 100% !important;
-        bottom: auto !important;
-        height: 30px !important;
-        background: linear-gradient(to bottom, #e9ecef, #e9ecef 80%, transparent) !important;
+    .connector-vert {
+        height: 50px !important; /* Increased from 30px */
+        top: -20px !important;
     }
     .process-heading {
         margin-bottom: 16px;
@@ -1513,10 +1505,6 @@
         border-radius: 12px !important;
         margin: 0 !important;
     }
-    .last-box {
-        border-radius: 12px !important; /* Changed to match others */
-        margin-left: 0 !important; /* Removed negative margin */
-    }
     .desc-box::before,
     .desc-box::after,
     .first-box::before,
@@ -1528,7 +1516,6 @@
         display: none !important;
     }
 }
-
     /* ======================================================================== */
 
 .social-impact-section {
